@@ -1,11 +1,33 @@
 @mixin ff_main {
     font-family: Helvetica, Arial, sans-serif;
 }
+
+.kernel {
+    width: 600px;
+    margin: 0 auto;
+}
+
 table {
+    border-collapse: collapse;
+    border-spacing: 0;
+
     td {
         @include ff_main();
         border: 1px solid lime;
         font-size: 16px;
         line-height: 24px;
+    }
+}
+
+img {
+    max-width: 100%;
+    font-size: 0;
+    display: block;
+    height: auto;
+}
+
+.test {
+    td {
+        padding-bottom: 24px;
     }
 }

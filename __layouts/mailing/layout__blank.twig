@@ -1,0 +1,33 @@
+{#
+layout__blank.twig
+Пустой шаблон. Только контент, только хардкор.
+#}
+<html>
+   <head>
+      <title>{{title}}</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!--[if gte mso 9]>
+      <xml>
+         <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+         </o:OfficeDocumentSettings>
+      </xml>
+      <![endif]-->
+      <link rel="stylesheet" href="../../__layouts/mailing/css/styles.css">
+     {# <style>
+         {% include '../../__layouts/mailing/css/embed_styles.css' %}
+         {% include '../../__layouts/mailing/css/styles.responsive.css' %}
+      </style> #}
+   </head>
+   <body bgcolor="#ffffff"{{body_id}}>
+   <table class="kernel">
+      <tr>
+         <td class="kernel__td">
+            {% block page %}{% endblock %}
+         </td>
+      </tr>
+   </table>
+   </body>
+</html>
