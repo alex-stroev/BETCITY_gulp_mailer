@@ -12,16 +12,19 @@ body {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     width: 100%;
+    background: #b1b1b1;
 }
 
 .kernel {
-    width: 600px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
 table {
     border-collapse: collapse;
     border-spacing: 0;
+    mso-table-lspace: 0pt;
+    mso-table-rspace: 0pt;
 }
 
 ///////////////////////////////////////////////
@@ -37,7 +40,13 @@ table {
 // /////////////////////////////////////////////
 .cont-1 {
     width: 100%;
-    background-color: #051854;
+    background-color: #062b75;
+
+    &__hero {
+        img {
+            @include respimg;
+        }
+    }
 
     &__text {
         @include ff_main;
@@ -54,11 +63,68 @@ table {
         text-align: center;
         vertical-align: top;
         padding-bottom: 36px;
-        background-color: #009900;
 
         img {
             display: block;
             max-width: 250px;
+            height: auto;
+        }
+    }
+
+    &__grid {
+        $spad: 16px;
+        padding-top: 40px;
+        background-color: #051854;
+        padding-left: $spad;
+        padding-right: $spad;
+    }
+
+    &__grid-button {
+        background-color: #051854;
+        text-align: center;
+        padding-top: 28px;
+        padding-bottom: 32px;
+
+        img {
+            display: block;
+            max-width: 250px;
+        }
+    }
+}
+
+.grid-1 {
+    width: 100%;
+
+    & > tr > td {
+        font-size: 0;
+        text-align: center;
+
+        & > div {
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+            width: 50%;
+            min-width: 245px;
+        }
+    }
+}
+
+.grid-1-item {
+    width: 100%;
+
+    td {
+        text-align: center;
+        vertical-align: middle;
+        padding-bottom: 20px;
+        // font-size: 18px;
+        // line-height: 18px;
+        // font-family: Helvetica, Arial, sans-serif;
+        // color: #ffffff;
+        // font-weight: bold;
+
+        img {
+            display: block;
+            max-width: 260px;
             height: auto;
         }
     }
