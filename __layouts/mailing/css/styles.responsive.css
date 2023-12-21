@@ -1,0 +1,15 @@
+@media (max-width: 1024px) {
+  .test td {
+    background-color: red !important;
+  }
+}
+
+@media (max-width: 768px) {
+  table {
+    background-color: orchid !important;
+  }
+
+  .test td {
+    background-color: gold !important;
+  }
+}

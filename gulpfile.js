@@ -69,16 +69,68 @@ gulp.task("clean_build", function () {
     return gulp.src("pub", { read: false, allowEmpty: true }).pipe(clean());
 });
 
+///////////////////////////////////////////////////////////////////////
+//    Группируем MEDIA QUERIES и записываем их тот же файл
+//    Увы, сейчас вынос в отдельный файл не работает, будет время - разобраться
+///////////////////////////////////////////////////////////////////////
+
+var mmq = require("gulp-merge-media-queries");
+function mergeMediaQueries() {
+    return gulp
+        .src("__layouts/mailing/css/styles.css")
+        .pipe(
+            mmq({
+                log: true,
+                //   use_external: true // BUGGED
+            })
+        )
+        .pipe(gulp.dest("__layouts/mailing/css"));
+}
+
+///////////////////////////////////////////////////////////////////////
+//    Записываем MEDIA QUERIES в отдельный файл, который потом вставляем в header (через styles)
+///////////////////////////////////////////////////////////////////////
+
+var mediaQueriesSplitter = require("gulp-media-queries-splitter");
+
+function splitMediaQueries() {
+    return gulp
+        .src("__layouts/mailing/css/styles.css")
+        .pipe(
+            mediaQueriesSplitter([
+                // Include all CSS rules
+                // {media: 'all', filename: 'all.css'},
+
+                // Include only CSS rules without screen size based media queries
+                { media: "none", filename: "styles.css" },
+
+                // Include CSS rules for small screen sizes and CSS rules without screen size based media queries
+                // {media: ['none', {minUntil: '576px'}, {max: '9999999px'}], filename: 'main.css'},
+
+                // Include CSS rules for medium screen sizes (mostly used on tablet)
+                // {media: [{min: '576px', minUntil: '768px'}, {min: '576px', max: '768px'}], filename: 'tablet.css'},
+
+                // Include CSS rules for bigger screen sizes (mostly used on desktop)
+                {
+                    media: { minUntil: "100px" },
+                    filename: "styles.responsive.css",
+                },
+            ])
+        )
+        .pipe(gulp.dest("__layouts/mailing/css/"));
+}
+
 ///////////////////////////////////////////////////////////////////
 // twig COMPILATION
 ///////////////////////////////////////////////////////////////////
 var twig = require("gulp-twig");
-gulp.task("twig", function () {
+
+function doTwig() {
     return gulp
         .src("__src_letters/*/*.twig")
         .pipe(twig())
         .pipe(gulp.dest("pub/"));
-});
+}
 
 ///////////////////////////////////////////////////////////////////
 //  Добавляем атрибуты к стилям
@@ -172,29 +224,46 @@ gulp.task("typograf", async function () {
 ///////////////////////////////////////////////////////////////////
 var runSequence = require("gulp4-run-sequence");
 
-gulp.task("default", async function () {
-    runSequence(
+// gulp.task("default", async function () {
+//     runSequence(
+//         "clean_build",
+//         "sass",
+//         "splitMediaQueries",
+//         "twig",
+//         // 'copyimages',
+//         // 'copyimages2',
+//         "prepareToInlining",
+
+//         ///////////////////////////////////////////////////////////////////
+//         // Для отладки комментируем следующие строки.
+//         ///////////////////////////////////////////////////////////////////
+//         "inline_css",
+//         "replaceSomeStyles",
+//         // 'clean', // глючит, разобраться
+//         //   'remove_classes',
+
+//         ///////////////////////////////////////////////////////////////////
+//         // Не комментриуем - просто причесалка. Типограф ставим ПОСЛЕ причесалки
+//         ///////////////////////////////////////////////////////////////////
+
+//         "prettify",
+//         "typograf"
+//     );
+// });
+
+const { series } = require("gulp");
+gulp.task(
+    "default",
+    series(
         "clean_build",
         "sass",
-        //   'mmq',
-        "twig",
-        //   'copyimages',
-        // 'copyimages2',
+        mergeMediaQueries,
+        splitMediaQueries,
+        doTwig,
         "prepareToInlining",
-
-        ///////////////////////////////////////////////////////////////////
-        // Для отладки комментируем следующие строки.
-        ///////////////////////////////////////////////////////////////////
         "inline_css",
         "replaceSomeStyles",
-        // 'clean', // глючит, разобраться
-        //   'remove_classes',
-
-        ///////////////////////////////////////////////////////////////////
-        // Не комментриуем - просто причесалка. Типограф ставим ПОСЛЕ причесалки
-        ///////////////////////////////////////////////////////////////////
-
         "prettify",
         "typograf"
-    );
-});
+    )
+);
