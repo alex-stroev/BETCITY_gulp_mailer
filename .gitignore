@@ -1,5 +1,6 @@
 node_modules/
 pub/
+__layouts/mailing/css
 .idea/
 *.DS_Store
 

@@ -65,9 +65,9 @@ var stylesToAttrs = [
 // Очищаем папку pub перед сборкой
 ///////////////////////////////////////////////////////////////////
 var clean = require("gulp-clean");
-gulp.task("clean_build", function () {
+function cleanBuild() {
     return gulp.src("pub", { read: false, allowEmpty: true }).pipe(clean());
-});
+}
 
 ///////////////////////////////////////////////////////////////////////
 //    Группируем MEDIA QUERIES и записываем их тот же файл
@@ -125,7 +125,7 @@ function splitMediaQueries() {
 ///////////////////////////////////////////////////////////////////
 var twig = require("gulp-twig");
 
-function doTwig() {
+function compileTWIG() {
     return gulp
         .src("__src_letters/*/*.twig")
         .pipe(twig())
@@ -135,23 +135,24 @@ function doTwig() {
 ///////////////////////////////////////////////////////////////////
 //  Добавляем атрибуты к стилям
 ///////////////////////////////////////////////////////////////////
-gulp.task("prepareToInlining", function () {
+
+function prepareToInlining() {
     return gulp
         .src("pub/**/*.html")
         .pipe(replace(preInlineReplaces))
         .pipe(gulp.dest("pub/"));
-});
-
+}
 ///////////////////////////////////////////////////////////////////
 //  Заменяем часть стилей на атрибуты
 //  ACHTUNG!!! Некоторые атрибуты могут быть прописаны непосредственно в коде, их в стилях определять не надо
 ///////////////////////////////////////////////////////////////////
-gulp.task("replaceSomeStyles", function () {
+
+function replaceSomeStyles() {
     return gulp
         .src("pub/**/*.html")
         .pipe(replace(stylesToAttrs))
         .pipe(gulp.dest("pub/"));
-});
+}
 
 ///////////////////////////////////////////////////////////////////
 // SASS COMPILATION.
@@ -159,19 +160,19 @@ gulp.task("replaceSomeStyles", function () {
 // ВАЖНО!!!! Потом разобраться с wildcards, чтобы реализовать мультитемплейт
 ///////////////////////////////////////////////////////////////////
 var sass = require("gulp-sass")(require("sass"));
-
-gulp.task("sass", function () {
+function compileSASS() {
     return gulp
         .src("__layouts/mailing/*styles.scss")
         .pipe(sass())
         .pipe(gulp.dest("__layouts/mailing/css"));
-});
+}
 
 ///////////////////////////////////////////////////////////////////
 // Инлайним на месте. Шортхэнды разбиваем вручную
 ///////////////////////////////////////////////////////////////////
 var inlineCss = require("gulp-inline-css");
-gulp.task("inline_css", function () {
+
+function inlineCSS() {
     return gulp
         .src("pub/**/*.html")
         .pipe(
@@ -180,14 +181,14 @@ gulp.task("inline_css", function () {
             })
         )
         .pipe(gulp.dest("pub/"));
-});
+}
 
 ///////////////////////////////////////////////////////////////////
 // причесываем выходной код
 ///////////////////////////////////////////////////////////////////
 var prettify = require("gulp-prettify");
 
-gulp.task("prettify", function () {
+function doPrettify() {
     return gulp
         .src("pub/**/*.html")
         .pipe(
@@ -197,14 +198,15 @@ gulp.task("prettify", function () {
             })
         )
         .pipe(gulp.dest("pub/"));
-});
+}
 
 ///////////////////////////////////////////////////////////////////
 // Типограф
 ///////////////////////////////////////////////////////////////////
 const typograf = require("gulp-typograf");
-gulp.task("typograf", async function () {
-    gulp.src("pub/**/*.html")
+function doTypograf() {
+    return gulp
+        .src("pub/**/*.html")
         .pipe(
             typograf({
                 disableRule: ["ru/other/phone-number"],
@@ -217,61 +219,31 @@ gulp.task("typograf", async function () {
             })
         )
         .pipe(gulp.dest("pub/"));
-});
+}
 
 ///////////////////////////////////////////////////////////////////
 // Удаляем скомпилированные стили после инлайнинга/вставки в код
 ///////////////////////////////////////////////////////////////////
-function cleanStylesAfterTwig() {
+function removeCSSwhenTWIGready() {
     return gulp.src("__layouts/mailing/css/", { read: false }).pipe(clean());
 }
 
 ///////////////////////////////////////////////////////////////////
 // Устанавливаем последовательность операций
 ///////////////////////////////////////////////////////////////////
-var runSequence = require("gulp4-run-sequence");
 
-// gulp.task("default", async function () {
-//     runSequence(
-//         "clean_build",
-//         "sass",
-//         "splitMediaQueries",
-//         "twig",
-//         // 'copyimages',
-//         // 'copyimages2',
-//         "prepareToInlining",
-
-//         ///////////////////////////////////////////////////////////////////
-//         // Для отладки комментируем следующие строки.
-//         ///////////////////////////////////////////////////////////////////
-//         "inline_css",
-//         "replaceSomeStyles",
-//         // 'clean', // глючит, разобраться
-//         //   'remove_classes',
-
-//         ///////////////////////////////////////////////////////////////////
-//         // Не комментриуем - просто причесалка. Типограф ставим ПОСЛЕ причесалки
-//         ///////////////////////////////////////////////////////////////////
-
-//         "prettify",
-//         "typograf"
-//     );
-// });
-
-const { series } = require("gulp");
-gulp.task(
-    "default",
-    series(
-        "clean_build",
-        "sass",
-        mergeMediaQueries,
-        splitMediaQueries,
-        doTwig,
-        "prepareToInlining",
-        "inline_css",
-        "replaceSomeStyles",
-        cleanStylesAfterTwig,
-        "prettify",
-        "typograf"
-    )
+var build = gulp.series(
+    cleanBuild,
+    compileSASS,
+    mergeMediaQueries,
+    splitMediaQueries,
+    compileTWIG,
+    prepareToInlining,
+    inlineCSS,
+    replaceSomeStyles,
+    removeCSSwhenTWIGready,
+    doPrettify,
+    doTypograf
 );
+
+exports.default = build;
