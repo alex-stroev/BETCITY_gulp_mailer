@@ -21,23 +21,41 @@ gulp.task("twig", function () {
 });
 
 ///////////////////////////////////////////////////////////////////
-// Типограф 
+// причесываем выходной код
 ///////////////////////////////////////////////////////////////////
-const typograf = require('gulp-typograf');
-gulp.task('typograf', async function() {
-    gulp.src('pub/**/*.html')
-        .pipe(typograf({
-          disableRule: ['ru/other/phone-number'],
-          safeTags: [
-                ['@{', '}'],
-                ['<font>', '</font>']
-            ],
-          locale: ['ru', 'en-US'],
-          htmlEntity: { type: 'name' } // Type of HTML entities: 'digit' - &#160;, 'name' - &nbsp;, 'default' - UTF-8
-        }))
-        .pipe(gulp.dest('pub/'));
+var prettify = require("gulp-prettify");
+
+gulp.task("prettify", function () {
+    return gulp
+        .src("pub/**/*.html")
+        .pipe(
+            prettify({
+                indent_size: 2,
+                unformatted: ["font", "span", "b", "strong", "i", "em"],
+            })
+        )
+        .pipe(gulp.dest("pub/"));
 });
 
+///////////////////////////////////////////////////////////////////
+// Типограф
+///////////////////////////////////////////////////////////////////
+const typograf = require("gulp-typograf");
+gulp.task("typograf", async function () {
+    gulp.src("pub/**/*.html")
+        .pipe(
+            typograf({
+                disableRule: ["ru/other/phone-number"],
+                safeTags: [
+                    ["@{", "}"],
+                    ["<font>", "</font>"],
+                ],
+                locale: ["ru", "en-US"],
+                htmlEntity: { type: "name" }, // Type of HTML entities: 'digit' - &#160;, 'name' - &nbsp;, 'default' - UTF-8
+            })
+        )
+        .pipe(gulp.dest("pub/"));
+});
 
 ///////////////////////////////////////////////////////////////////
 // Устанавливаем последовательность операций
@@ -66,7 +84,7 @@ gulp.task("default", async function () {
         // Не комментриуем - просто причесалка. Типограф ставим ПОСЛЕ причесалки
         ///////////////////////////////////////////////////////////////////
 
-        //   'prettify',
-          'typograf'
+        "prettify",
+        "typograf"
     );
 });
