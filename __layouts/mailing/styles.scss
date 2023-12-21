@@ -30,4 +30,10 @@ img {
     td {
         padding-bottom: 24px;
     }
+    tr:first-child {
+        td {
+            text-align: right;
+            background-color: azure;
+        }
+    }
 }

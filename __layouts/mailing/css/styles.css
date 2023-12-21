@@ -24,3 +24,7 @@ img {
 .test td {
   padding-bottom: 24px;
 }
+.test tr:first-child td {
+  text-align: right;
+  background-color: azure;
+}
