@@ -21,6 +21,20 @@ gulp.task("twig", function () {
 });
 
 ///////////////////////////////////////////////////////////////////
+// SASS COMPILATION.
+// Собираем не все файлы, а только styles.less и embed_styles.less, остальные подключаются как инклюды
+// ВАЖНО!!!! Потом разобраться с wildcards, чтобы реализовать мультитемплейт
+///////////////////////////////////////////////////////////////////
+var sass = require("gulp-sass")(require("sass"));
+
+gulp.task("sass", function () {
+    return gulp
+        .src("__layouts/mailing/*styles.scss")
+        .pipe(sass())
+        .pipe(gulp.dest("__layouts/mailing/css"));
+});
+
+///////////////////////////////////////////////////////////////////
 // причесываем выходной код
 ///////////////////////////////////////////////////////////////////
 var prettify = require("gulp-prettify");
@@ -65,7 +79,7 @@ var runSequence = require("gulp4-run-sequence");
 gulp.task("default", async function () {
     runSequence(
         "clean_build",
-        //   'less',
+        "sass",
         //   'mmq',
         "twig",
         //   'copyimages',

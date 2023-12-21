@@ -1,0 +1,11 @@
+@mixin ff_main {
+    font-family: Helvetica, Arial, sans-serif;
+}
+table {
+    td {
+        @include ff_main();
+        border: 1px solid lime;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
