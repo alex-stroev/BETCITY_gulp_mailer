@@ -1,7 +1,8 @@
+@import "mixins";
 /////////////////////////////////////////////////////////////
 //  Reset HTML/BODY
 /////////////////////////////////////////////////////////////
-html{
+html {
     margin: 0;
     padding: 0;
 }
@@ -13,11 +14,6 @@ body {
     width: 100%;
 }
 
-
-@mixin ff_main {
-    font-family: Helvetica, Arial, sans-serif;
-}
-
 .kernel {
     width: 600px;
     margin: 0 auto;
@@ -26,29 +22,18 @@ body {
 table {
     border-collapse: collapse;
     border-spacing: 0;
-
-    @media (max-width: 768px) {
-        background-color: orchid !important;
-    }
-
-    td {
-        @include ff_main();
-        border: 1px solid lime;
-        font-size: 16px;
-        line-height: 24px;
-    }
-}
-
-img {
-    max-width: 100%;
-    font-size: 0;
-    display: block;
-    height: auto;
 }
 
 .test {
     td {
+        @include ff_main;
+        font-size: 16px;
+        line-height: 24px;
         padding-bottom: 24px;
+
+        img {
+            @include respimg;
+        }
 
         @media (max-width: 768px) {
             background-color: gold !important;

@@ -1,0 +1,28 @@
+@mixin noline {
+    text-decoration: none;
+    
+    &:hover,
+    &:active {
+        text-decoration: underline !important;
+    }
+}
+
+@mixin underline {
+    text-decoration: underline;
+
+    &:hover,
+    &:active {
+        text-decoration: none !important;
+    }
+}
+
+@mixin ff_main {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+@mixin respimg {
+    max-width: 100%;
+    font-size: 0;
+    display: block;
+    height: auto;
+}

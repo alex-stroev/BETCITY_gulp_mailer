@@ -1,6 +1,7 @@
-a.blue,
+@import "mixins";
+
 a.link {
-    // color: #1e99f7;
+    @include noline;
     color: #00a9e0;
 }
 
@@ -12,37 +13,19 @@ a.grey {
 a.black {
     color: #000000;
 }
-
-@mixin noline {
-    text-decoration: none;
-    &:hover,
-    &:active {
-        text-decoration: underline !important;
-    }
+.noline {
+    @include noline;
 }
 
 .underline {
-    text-decoration: underline;
-    &:hover,
-    &:active {
-        text-decoration: none !important;
-    }
-}
-
-.dotted {
-    text-decoration: none;
-    border-bottom: 1px dotted red;
-    &:hover,
-    &:active {
-        border-bottom: 1px dotted transparent;
-    }
-}
-
-a.link {
-    @include noline;
+    @include underline;
 }
 
 a.fff,
 a.white {
     color: #ffffff;
+}
+
+.testtt {
+    background-color: chartreuse;
 }
