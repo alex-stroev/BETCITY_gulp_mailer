@@ -220,6 +220,13 @@ gulp.task("typograf", async function () {
 });
 
 ///////////////////////////////////////////////////////////////////
+// Удаляем скомпилированные стили после инлайнинга/вставки в код
+///////////////////////////////////////////////////////////////////
+function cleanStylesAfterTwig() {
+    return gulp.src("__layouts/mailing/css/", { read: false }).pipe(clean());
+}
+
+///////////////////////////////////////////////////////////////////
 // Устанавливаем последовательность операций
 ///////////////////////////////////////////////////////////////////
 var runSequence = require("gulp4-run-sequence");
@@ -263,6 +270,7 @@ gulp.task(
         "prepareToInlining",
         "inline_css",
         "replaceSomeStyles",
+        cleanStylesAfterTwig,
         "prettify",
         "typograf"
     )
