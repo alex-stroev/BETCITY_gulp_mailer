@@ -91,6 +91,8 @@ function mergeMediaQueries() {
 //    Записываем MEDIA QUERIES в отдельный файл, который потом вставляем в header (через styles)
 ///////////////////////////////////////////////////////////////////////
 
+// https://stackoverflow.com/questions/56347887/using-gulp-to-split-sass-css-file-into-multiple-css-files-based-on-media-queries
+
 var mediaQueriesSplitter = require("gulp-media-queries-splitter");
 
 function splitMediaQueries() {
@@ -239,9 +241,19 @@ var build = gulp.series(
     splitMediaQueries,
     compileTWIG,
     prepareToInlining,
+
+    ///////////////////////////////////////////////////////////////////
+    // Для отладки комментируем следующие строки.
+    ///////////////////////////////////////////////////////////////////
+
     inlineCSS,
     replaceSomeStyles,
     removeCSSwhenTWIGready,
+
+    ///////////////////////////////////////////////////////////////////
+    // Не комментриуем - просто причесалка. Типограф ставим ПОСЛЕ причесалки
+    ///////////////////////////////////////////////////////////////////
+
     doPrettify,
     doTypograf
 );

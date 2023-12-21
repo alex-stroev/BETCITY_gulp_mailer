@@ -1,3 +1,19 @@
+/////////////////////////////////////////////////////////////
+//  Reset HTML/BODY
+/////////////////////////////////////////////////////////////
+html{
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    width: 100%;
+}
+
+
 @mixin ff_main {
     font-family: Helvetica, Arial, sans-serif;
 }

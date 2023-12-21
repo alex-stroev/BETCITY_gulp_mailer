@@ -1,0 +1,48 @@
+a.blue,
+a.link {
+    // color: #1e99f7;
+    color: #00a9e0;
+}
+
+a.gray,
+a.grey {
+    color: #888888;
+}
+
+a.black {
+    color: #000000;
+}
+
+@mixin noline {
+    text-decoration: none;
+    &:hover,
+    &:active {
+        text-decoration: underline !important;
+    }
+}
+
+.underline {
+    text-decoration: underline;
+    &:hover,
+    &:active {
+        text-decoration: none !important;
+    }
+}
+
+.dotted {
+    text-decoration: none;
+    border-bottom: 1px dotted red;
+    &:hover,
+    &:active {
+        border-bottom: 1px dotted transparent;
+    }
+}
+
+a.link {
+    @include noline;
+}
+
+a.fff,
+a.white {
+    color: #ffffff;
+}
