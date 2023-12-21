@@ -14,6 +14,7 @@
   "dependencies": {
     "gulp-clean": "^0.4.0",
     "gulp-twig": "^1.2.0",
+    "gulp-typograf": "^4.1.0",
     "gulp4-run-sequence": "^1.0.2"
   }
 }

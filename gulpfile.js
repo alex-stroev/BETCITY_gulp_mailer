@@ -21,6 +21,25 @@ gulp.task("twig", function () {
 });
 
 ///////////////////////////////////////////////////////////////////
+// Типограф 
+///////////////////////////////////////////////////////////////////
+const typograf = require('gulp-typograf');
+gulp.task('typograf', async function() {
+    gulp.src('pub/**/*.html')
+        .pipe(typograf({
+          disableRule: ['ru/other/phone-number'],
+          safeTags: [
+                ['@{', '}'],
+                ['<font>', '</font>']
+            ],
+          locale: ['ru', 'en-US'],
+          htmlEntity: { type: 'name' } // Type of HTML entities: 'digit' - &#160;, 'name' - &nbsp;, 'default' - UTF-8
+        }))
+        .pipe(gulp.dest('pub/'));
+});
+
+
+///////////////////////////////////////////////////////////////////
 // Устанавливаем последовательность операций
 ///////////////////////////////////////////////////////////////////
 var runSequence = require("gulp4-run-sequence");
@@ -30,7 +49,7 @@ gulp.task("default", async function () {
         "clean_build",
         //   'less',
         //   'mmq',
-        "twig"
+        "twig",
         //   'copyimages',
         // 'copyimages2',
         //   'prepareToInlining',
@@ -48,6 +67,6 @@ gulp.task("default", async function () {
         ///////////////////////////////////////////////////////////////////
 
         //   'prettify',
-        //   'typograf'
+          'typograf'
     );
 });
