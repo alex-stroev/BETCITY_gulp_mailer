@@ -24,29 +24,42 @@ table {
     border-spacing: 0;
 }
 
-.test {
-    td {
+///////////////////////////////////////////////
+///  Если планируем использовать медиакверисы (пока что да),
+/// хоть одна инструкция должна присутствовать (для сборки файла)
+///////////////////////////////////////////////
+@media (max-width: 200px) {
+    .t {
+        font-size: 12px;
+    }
+}
+
+// /////////////////////////////////////////////
+.cont-1 {
+    width: 100%;
+    background-color: #051854;
+
+    &__text {
         @include ff_main;
-        font-size: 16px;
-        line-height: 24px;
-        padding-bottom: 24px;
+        font-size: 19px;
+        line-height: 26px;
+        color: #fff;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        padding-left: 48px;
+        padding-right: 40px;
+    }
+
+    &__button {
+        text-align: center;
+        vertical-align: top;
+        padding-bottom: 36px;
+        background-color: #009900;
 
         img {
-            @include respimg;
-        }
-
-        @media (max-width: 768px) {
-            background-color: gold !important;
-        }
-
-        @media (max-width: 1024px) {
-            background-color: chartreuse !important;
-        }
-    }
-    tr:first-child {
-        td {
-            text-align: right;
-            background-color: azure;
+            display: block;
+            max-width: 250px;
+            height: auto;
         }
     }
 }
