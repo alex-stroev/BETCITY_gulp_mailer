@@ -206,7 +206,7 @@ table {
   padding-top: 8px;
   font-size: 0;
   text-align: center;
-  background-color: gold;
+  //   background-color: gold;
 }
 
 .footer-inline {
@@ -214,18 +214,24 @@ table {
   width: 49%;
   min-width: 250px;
   vertical-align: top;
-  background-color: chartreuse;
-
-  & > table {
-    border: 2px solid red;
-  }
+  //   background-color: chartreuse;
 }
 
 .fc-group {
+    width: 100%;
+
   &__cell {
-    border: 2px solid teal;
+    // border: 2px solid teal;
     text-align: center;
-    padding-bottom: 10px;
-    padding-top: 5px;
+    padding-bottom: 8px;
+    padding-top: 4px;
+
+    table {
+        td {
+            font-size: 0;
+            padding-left: 4px;
+            padding-right: 4px;
+        }
+    }
   }
 }
