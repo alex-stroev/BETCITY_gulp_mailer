@@ -1,27 +1,83 @@
 @import "mixins";
 
 a.link {
-    @include noline;
-    color: #00a9e0;
+  @include noline;
+  color: #00a9e0;
 }
 
 a.gray,
 a.grey {
-    color: #888888;
+  color: #888888;
 }
 
 a.black {
-    color: #000000;
+  color: #000000;
 }
 .noline {
-    @include noline;
+  @include noline;
 }
 
 .underline {
-    @include underline;
+  @include underline;
 }
 
 a.fff,
 a.white {
-    color: #ffffff;
+  color: #ffffff;
 }
+
+////////////////////////////////////////////////////////////////////
+///
+/// /* RESET STYLES */
+
+img {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  border: none;
+  -ms-interpolation-mode: bicubic;
+  max-width: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+td {
+  word-break: normal;
+//   border-collapse: collapse !important;
+  hyphens: none;
+  mso-hyphenate: none;
+}
+
+/* FOR DARKMODE */
+/* 
+:root {
+    color-scheme: light dark;
+    supported-color-schemes: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  .footer {
+    background-color:#062B75 !important;
+    color: #fff !important;
+  }
+}
+
+[data-ogsc] .text {
+    color: #333333 !important;
+}
+
+[data-ogsc] .footer {
+    background-color:#062B75 !important;
+    color: #fff !important;
+} */
+/*
+[data-ogsb] {
+
+} */
