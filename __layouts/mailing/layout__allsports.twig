@@ -1,35 +1,53 @@
 {#
 layout__allsports.twig
 #}
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTDXHTML1.0Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 	<head>
 		<title>{{title}}</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<meta
-		name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<!--[if gte mso 9]>
-		      <xml>
-		         <o:OfficeDocumentSettings>
-		            <o:AllowPNG/>
-		            <o:PixelsPerInch>96</o:PixelsPerInch>
-		         </o:OfficeDocumentSettings>
-		      </xml>
-		      <![endif]-->
+		http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<!--[if !mso]><!-->
+		<meta
+		http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<!--<![endif]-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="x-apple-disable-message-reformatting"/>
+		<meta name="color-scheme" content="light dark">
+		<meta name="supported-color-schemes" content="light dark">
 		<link rel="stylesheet" href="../../__layouts/mailing/css/styles.css">
 		<style>
 			{% include '../../__layouts/mailing/css/embed_styles.css' %}
 			{% include '../../__layouts/mailing/css/styles.responsive.css' %}
 		</style>
+		<!--[if gte mso 9]><xml>
+								    <o:OfficeDocumentSettings>
+								        <o:AllowPNG/>
+								        <o:PixelsPerInch>96</o:PixelsPerInch>
+								    </o:OfficeDocumentSettings>
+								</xml><![endif]-->
+		<!--[if mso]><xml xmlns:w="urn:schemas-microsoft-com:office:word"><w:WordDocument><w:AutoHyphenation/></w:WordDocument></xml><![endif]-->
 	</head>
-	<body bgcolor="#ffffff" {{body_id}}>
-		<table class="kernel">
+	<body class="body" style="color:#333333; font-size:12px; background:#ffffff;" alink="#FF0000" link="#FF0000" bgcolor="#ffffff" text="#ffffff" yahoo="fix">
+
+		<table class="global inl">
 			<tr>
-				<td class="kernel__td"> {% block page %}{% endblock %}
+				<td class="global__td inl">
+
+					<table class="kernel inl">
+						<tr>
+							<td class="kernel__td inl"> {% block page %}{% endblock %}
+								</td>
+							</tr>
+							<tr>
+								<td class="kernel__footer inl">{% include 'layout_sections/footer.twig' %}</td>
+							</tr>
+						</table>
+
 					</td>
 				</tr>
-				<tr>
-					<td class="kernel__footer">{% include 'layout_sections/footer.twig' %}</td>
-				</tr>
 			</table>
+
+
 		</body>
 	</html>

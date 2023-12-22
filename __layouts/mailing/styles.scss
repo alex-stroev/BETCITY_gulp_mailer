@@ -15,9 +15,24 @@ body {
   background: #b1b1b1;
 }
 
+.global {
+  width: 100%;
+
+  &__td {
+    background: #b1b1b1;
+    vertical-align: top;
+    text-align: left;
+  }
+}
+
 .kernel {
-  max-width: 600px;
-  margin: 0 auto;
+  width: 580px;
+  text-align: center;
+  background-color: #ffffff;
+
+  &__td {
+    vertical-align: top;
+  }
 }
 
 table {
