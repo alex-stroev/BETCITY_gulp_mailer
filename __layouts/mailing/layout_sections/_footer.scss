@@ -2,32 +2,105 @@
     width: 100%;
 
     &__wrapper {
-        padding-left: 16px;
-        padding-right: 16px;
+        // padding-left: 16px;
+        // padding-right: 16px;
         background-color: #062b75;
         color: #fff;
     }
 }
-
 //////////////////////////////////////////////////////////////////////////////
-/// Блок с доп. инфой
+/// Иконки приложений
 //////////////////////////////////////////////////////////////////////////////
 ///
-.footer-small {
+.footer-apps-holder {
+    width: 100%;
+
+    &__padder {
+        padding-left: 8px;
+        padding-right: 8px;
+        text-align: center;
+        font-size: 0;
+    }
+}
+
+.footer-app {
+    display: inline-table;
+    // text-align: left;
+    // width: 50%;
+    // background-color: red;
+    $spad: 4px;
+    width: 282px;
+
+    td {
+        font-size: 0;
+        padding-left: $spad;
+        padding-right: $spad;
+        padding-top: $spad;
+        padding-bottom: $spad;
+    }
+
+    img {
+        @include respimg;
+        display: block;
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// Контакты
+//////////////////////////////////////////////////////////////////////////////
+///
+.footer-contacts {
+    width: 100%;
+
+    &__wrapper {
+        font-size: 0;
+        text-align: center;
+    }
+}
+.contact-inliner {
+    // width: 50%;
+    display: inline-block;
+    // min-width: 222px;
+    width: 250px;
+    vertical-align: top;
+    // padding: 0 15px;
+}
+
+.footer-contact {
     width: 100%;
 
     td {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    &__pic {
+        width: 40px;
+
+        img {
+            display: block;
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &__text {
         @include ff_main;
-        padding-top: 16px;
-        padding-bottom: 16px;
-        padding-left: 24px;
-        padding-right: 24px;
-        background-color: #062b75;
-        color: #fff;
-        font-size: 12px;
+        text-decoration: none;
+        color: #fdfdfd;
+        white-space: nowrap;
+        padding-left: 16px;
 
         a {
-            color: #ffffff;
+            color: #fdfdfd;
+            font-size: 19.5px;
+        }
+
+        span {
+            font-size: 11.3px;
+            font-weight: normal;
+            color: #0092f3;
+            white-space: nowrap;
         }
     }
 }
@@ -76,61 +149,24 @@
 }
 
 //////////////////////////////////////////////////////////////////////////////
-/// Контакты
+/// Блок со служебной инфой
 //////////////////////////////////////////////////////////////////////////////
 ///
-.footer-contacts {
-    width: 100%;
-
-    &__wrapper {
-        font-size: 0;
-        text-align: center;
-    }
-}
-.contact-inliner {
-    // width: 50%;
-    display: inline-block;
-    // min-width: 222px;
-    width: 240px;
-    vertical-align: top;
-    // padding: 0 15px;
-}
-
-.footer-contact {
+.footer-small {
     width: 100%;
 
     td {
-        padding-top: 8px;
-        padding-bottom: 8px;
-    }
-
-    &__pic {
-        width: 40px;
-
-        img {
-            display: block;
-            width: 40px;
-            height: 40px;
-        }
-    }
-
-    &__text {
         @include ff_main;
-        text-decoration: none;
-        color: #fdfdfd;
-        white-space: nowrap;
-        padding-left: 16px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 24px;
+        padding-right: 24px;
+        background-color: #062b75;
+        color: #fff;
+        font-size: 12px;
 
         a {
-            color: #fdfdfd;
-            font-size: 19.5px;
-        }
-
-        span {
-            font-size: 11.3px;
-            font-weight: normal;
-            color: #0092f3;
-            white-space: nowrap;
+            color: #ffffff;
         }
     }
 }
