@@ -1,0 +1,76 @@
+.b-footer {
+    width: 100%;
+
+    &__wrapper {
+        padding-left: 16px;
+        padding-right: 16px;
+        background-color: #062b75;
+        color: #fff;
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// Блок с доп. инфой
+//////////////////////////////////////////////////////////////////////////////
+///
+.footer-small {
+    width: 100%;
+
+    td {
+        @include ff_main;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 24px;
+        padding-right: 24px;
+        background-color: #062b75;
+        color: #fff;
+        font-size: 12px;
+
+        a {
+            color: #ffffff;
+        }
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// Социальные иконки
+//////////////////////////////////////////////////////////////////////////////
+///
+.footer-socials {
+    width: 100%;
+
+    &__td {
+        text-align: center;
+        vertical-align: top;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}
+
+.footer-si {
+    width: 250px;
+    text-align: center;
+
+    &__pic {
+        width: 40px;
+
+        img {
+            display: block;
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &__text {
+        @include ff_main;
+        vertical-align: middle;
+        color: #fdfdfd;
+        font-size: 19.5px;
+        white-space: nowrap;
+        padding-left: 16px;
+
+        a {
+            color: #fdfdfd;
+        }
+    }
+}
