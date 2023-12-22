@@ -1,4 +1,6 @@
 @import "mixins";
+
+$gross_width: 580px;
 /////////////////////////////////////////////////////////////
 //  Reset HTML/BODY
 /////////////////////////////////////////////////////////////
@@ -26,7 +28,7 @@ body {
 }
 
 .kernel {
-    max-width: 580px;
+    max-width: $gross_width;
     text-align: center;
     background-color: #ffffff;
 
@@ -87,11 +89,8 @@ table {
     }
 
     &__grid {
-        $spad: 16px;
         padding-top: 40px;
         background-color: #051854;
-        // padding-left: $spad;
-        // padding-right: $spad;
     }
 
     &__grid-button {
@@ -107,52 +106,46 @@ table {
     }
 }
 
-.grid-1 {
+// //////////////////////////////////
+.allsports-grid {
     width: 100%;
-    // background-color: lime;
+    $spad: 8px;
+    $item_width: calc(($gross_width - $spad * 2) / 2);
 
-    & > tr > td {
+    &__row {
         font-size: 0;
         text-align: center;
 
-        padding-left: 8px;
-        padding-right: 8px;
+        padding-left: $spad;
+        padding-right: $spad;
 
         & > div {
             display: inline-block;
             vertical-align: middle;
             text-align: center;
-            // width: 50%;
-            // min-width: 245px;
-            width: 282px;
+            width: $item_width;
         }
     }
-}
 
-.grid-1-item {
-    // width: 100%;
+    &__item {
+        width: $item_width;
+        display: inline-table;
 
-    width: 282px;
+        td {
+            text-align: center;
+            vertical-align: middle;
+            padding-top: $spad;
+            padding-bottom: $spad;
+            padding-left: $spad;
+            padding-right: $spad;
 
-    td {
-        text-align: center;
-        vertical-align: middle;
-        padding-bottom: 20px;
-        // font-size: 18px;
-        // line-height: 18px;
-        // font-family: Helvetica, Arial, sans-serif;
-        // color: #ffffff;
-        // font-weight: bold;
-        // border: 1px solid red;
-
-        padding-left: 8px;
-        padding-right: 8px;
-
-        img {
-            display: block;
-            // max-width: 260px;
-            height: auto;
-            @include respimg;
+            img {
+                display: block;
+                height: auto;
+                width: calc(
+                    $item_width - $spad * 2
+                ); // ширина родителя минус боковые паддинги
+            }
         }
     }
 }
