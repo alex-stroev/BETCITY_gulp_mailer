@@ -38,8 +38,8 @@ body {
 table {
     border-collapse: collapse;
     border-spacing: 0;
-    mso-table-lspace: 0pt;
-    mso-table-rspace: 0pt;
+    // mso-table-lspace: 0pt;
+    // mso-table-rspace: 0pt;
 }
 
 ///////////////////////////////////////////////
@@ -90,8 +90,8 @@ table {
         $spad: 16px;
         padding-top: 40px;
         background-color: #051854;
-        padding-left: $spad;
-        padding-right: $spad;
+        // padding-left: $spad;
+        // padding-right: $spad;
     }
 
     &__grid-button {
@@ -109,23 +109,30 @@ table {
 
 .grid-1 {
     width: 100%;
+    // background-color: lime;
 
     & > tr > td {
         font-size: 0;
         text-align: center;
 
+        padding-left: 8px;
+        padding-right: 8px;
+
         & > div {
             display: inline-block;
             vertical-align: middle;
             text-align: center;
-            width: 50%;
-            min-width: 245px;
+            // width: 50%;
+            // min-width: 245px;
+            width: 282px;
         }
     }
 }
 
 .grid-1-item {
-    width: 100%;
+    // width: 100%;
+
+    width: 282px;
 
     td {
         text-align: center;
@@ -136,11 +143,16 @@ table {
         // font-family: Helvetica, Arial, sans-serif;
         // color: #ffffff;
         // font-weight: bold;
+        // border: 1px solid red;
+
+        padding-left: 8px;
+        padding-right: 8px;
 
         img {
             display: block;
-            max-width: 260px;
+            // max-width: 260px;
             height: auto;
+            @include respimg;
         }
     }
 }
