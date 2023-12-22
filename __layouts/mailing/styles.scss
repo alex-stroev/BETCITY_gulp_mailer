@@ -184,6 +184,7 @@ table {
 .footer-social {
   //   background-color: teal;
 
+
   td {
     padding-top: 8px;
     padding-bottom: 8px;
@@ -191,6 +192,7 @@ table {
 
   &__img {
     width: 40px;
+    background-color: lime;
 
     img {
       width: 40px;
@@ -205,6 +207,8 @@ table {
     font-size: 19.5px;
     white-space: nowrap;
     padding-left: 16px;
+    width: 200px;
+    background-color: brown;
 
     a {
       color: #fdfdfd;
