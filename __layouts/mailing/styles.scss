@@ -3,43 +3,43 @@
 //  Reset HTML/BODY
 /////////////////////////////////////////////////////////////
 html {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 body {
-  margin: 0;
-  padding: 0;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  width: 100%;
-  background: #b1b1b1;
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    width: 100%;
+    background: #b1b1b1;
 }
 
 .global {
-  width: 100%;
+    width: 100%;
 
-  &__td {
-    background: #b1b1b1;
-    vertical-align: top;
-    text-align: left;
-  }
+    &__td {
+        background: #b1b1b1;
+        vertical-align: top;
+        text-align: left;
+    }
 }
 
 .kernel {
-  width: 580px;
-  text-align: center;
-  background-color: #ffffff;
+    max-width: 580px;
+    text-align: center;
+    background-color: #ffffff;
 
-  &__td {
-    vertical-align: top;
-  }
+    &__td {
+        vertical-align: top;
+    }
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  mso-table-lspace: 0pt;
-  mso-table-rspace: 0pt;
+    border-collapse: collapse;
+    border-spacing: 0;
+    mso-table-lspace: 0pt;
+    mso-table-rspace: 0pt;
 }
 
 ///////////////////////////////////////////////
@@ -47,102 +47,102 @@ table {
 /// хоть одна инструкция должна присутствовать (для сборки файла)
 ///////////////////////////////////////////////
 @media (max-width: 200px) {
-  .t {
-    font-size: 12px;
-  }
+    .t {
+        font-size: 12px;
+    }
 }
 
 // /////////////////////////////////////////////
 .cont-1 {
-  width: 100%;
-  background-color: #062b75;
+    width: 100%;
+    background-color: #062b75;
 
-  &__hero {
-    img {
-      @include respimg;
+    &__hero {
+        img {
+            @include respimg;
+        }
     }
-  }
 
-  &__text {
-    @include ff_main;
-    font-size: 19px;
-    line-height: 26px;
-    color: #fff;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    padding-left: 48px;
-    padding-right: 40px;
-  }
-
-  &__button {
-    text-align: center;
-    vertical-align: top;
-    padding-bottom: 36px;
-
-    img {
-      display: block;
-      max-width: 250px;
-      height: auto;
+    &__text {
+        @include ff_main;
+        font-size: 19px;
+        line-height: 26px;
+        color: #fff;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        padding-left: 48px;
+        padding-right: 40px;
     }
-  }
 
-  &__grid {
-    $spad: 16px;
-    padding-top: 40px;
-    background-color: #051854;
-    padding-left: $spad;
-    padding-right: $spad;
-  }
+    &__button {
+        text-align: center;
+        vertical-align: top;
+        padding-bottom: 36px;
 
-  &__grid-button {
-    background-color: #051854;
-    text-align: center;
-    padding-top: 28px;
-    padding-bottom: 32px;
-
-    img {
-      display: block;
-      max-width: 250px;
+        img {
+            display: block;
+            max-width: 250px;
+            height: auto;
+        }
     }
-  }
+
+    &__grid {
+        $spad: 16px;
+        padding-top: 40px;
+        background-color: #051854;
+        padding-left: $spad;
+        padding-right: $spad;
+    }
+
+    &__grid-button {
+        background-color: #051854;
+        text-align: center;
+        padding-top: 28px;
+        padding-bottom: 32px;
+
+        img {
+            display: block;
+            max-width: 250px;
+        }
+    }
 }
 
 .grid-1 {
-  width: 100%;
+    width: 100%;
 
-  & > tr > td {
-    font-size: 0;
-    text-align: center;
+    & > tr > td {
+        font-size: 0;
+        text-align: center;
 
-    & > div {
-      display: inline-block;
-      vertical-align: middle;
-      text-align: center;
-      width: 50%;
-      min-width: 245px;
+        & > div {
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+            width: 50%;
+            min-width: 245px;
+        }
     }
-  }
 }
 
 .grid-1-item {
-  width: 100%;
+    width: 100%;
 
-  td {
-    text-align: center;
-    vertical-align: middle;
-    padding-bottom: 20px;
-    // font-size: 18px;
-    // line-height: 18px;
-    // font-family: Helvetica, Arial, sans-serif;
-    // color: #ffffff;
-    // font-weight: bold;
+    td {
+        text-align: center;
+        vertical-align: middle;
+        padding-bottom: 20px;
+        // font-size: 18px;
+        // line-height: 18px;
+        // font-family: Helvetica, Arial, sans-serif;
+        // color: #ffffff;
+        // font-weight: bold;
 
-    img {
-      display: block;
-      max-width: 260px;
-      height: auto;
+        img {
+            display: block;
+            max-width: 260px;
+            height: auto;
+        }
     }
-  }
 }
 
 @import "layout_sections/footer";

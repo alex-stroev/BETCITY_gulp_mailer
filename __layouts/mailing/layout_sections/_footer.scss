@@ -74,3 +74,63 @@
         }
     }
 }
+
+//////////////////////////////////////////////////////////////////////////////
+/// Контакты
+//////////////////////////////////////////////////////////////////////////////
+///
+.footer-contacts {
+    width: 100%;
+
+    &__wrapper {
+        font-size: 0;
+        text-align: center;
+    }
+}
+.contact-inliner {
+    // width: 50%;
+    display: inline-block;
+    // min-width: 222px;
+    width: 240px;
+    vertical-align: top;
+    // padding: 0 15px;
+}
+
+.footer-contact {
+    width: 100%;
+
+    td {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    &__pic {
+        width: 40px;
+
+        img {
+            display: block;
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &__text {
+        @include ff_main;
+        text-decoration: none;
+        color: #fdfdfd;
+        white-space: nowrap;
+        padding-left: 16px;
+
+        a {
+            color: #fdfdfd;
+            font-size: 19.5px;
+        }
+
+        span {
+            font-size: 11.3px;
+            font-weight: normal;
+            color: #0092f3;
+            white-space: nowrap;
+        }
+    }
+}
