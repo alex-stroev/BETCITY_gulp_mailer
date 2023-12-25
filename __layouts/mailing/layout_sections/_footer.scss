@@ -1,3 +1,17 @@
+//////////////////////////////////////////////////////////////////////////////
+/// Global footer variables
+//////////////////////////////////////////////////////////////////////////////
+$iconed_block_width: 250px;
+
+@mixin footer_iconed_block_vertical_paddings {
+    padding-top: 8px;
+    padding-bottom: 16px;
+    // border: 1px solid gold;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+//
+//////////////////////////////////////////////////////////////////////////////
 .b-footer {
     width: 100%;
 
@@ -58,6 +72,8 @@
 /// Контакты
 //////////////////////////////////////////////////////////////////////////////
 ///
+///
+
 .footer-contacts {
     width: 100%;
 
@@ -66,21 +82,19 @@
         text-align: center;
     }
 }
+
 .contact-inliner {
-    // width: 50%;
     display: inline-block;
-    // min-width: 222px;
-    width: 250px;
+    width: $iconed_block_width;
     vertical-align: top;
-    // padding: 0 15px;
 }
 
 .footer-contact {
-    width: 100%;
+    width: $iconed_block_width;
+    display: inline-table;
 
     td {
-        padding-top: 8px;
-        padding-bottom: 8px;
+        @include footer_iconed_block_vertical_paddings;
     }
 
     &__pic {
@@ -124,14 +138,16 @@
     &__td {
         text-align: center;
         vertical-align: top;
-        padding-top: 8px;
-        padding-bottom: 8px;
     }
 }
 
 .footer-si {
-    width: 250px;
+    width: $iconed_block_width;
     text-align: center;
+
+    td {
+        @include footer_iconed_block_vertical_paddings;
+    }
 
     &__pic {
         width: 40px;
