@@ -1,0 +1,27 @@
+.b-header {
+    width: 100%;
+
+    td {
+        @include ff_main;
+        font-size: 17px;
+        line-height: 18px;
+        background-color: #061956;
+        height: 24px;
+        text-align: center;
+        vertical-align: middle;
+        width: 25%;
+
+        &:nth-child(3) {
+            width: 27%;
+        }
+
+        &:nth-child(4) {
+            width: 23%;
+        }
+
+        a {
+            color: #ffffff;
+            white-space: nowrap;
+        }
+    }
+}
