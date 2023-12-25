@@ -106,18 +106,20 @@ table {
     }
 }
 
-// //////////////////////////////////
+///////////////////////////////////////////////
+// Сетка для "Все виды спорта"
+///////////////////////////////////////////////
 .allsports-grid {
     width: 100%;
-    $spad: 8px;
-    $item_width: calc(($gross_width - $spad * 2) / 2);
+    $spad: 12px;
+    $item_width: calc(($gross_width - $spad * 4) / 2);
 
     &__row {
         font-size: 0;
         text-align: center;
 
-        padding-left: $spad;
-        padding-right: $spad;
+        padding-left: calc($spad * 2);
+        padding-right: calc($spad * 2);
 
         & > div {
             display: inline-block;
