@@ -1,0 +1,281 @@
+{% extends '../../__layouts/mailing/layout__allsports.twig' %}
+{% set title = '__TEMPLATE_didgest' %}
+{% block mso9_open %}
+  <!--    [if (gte mso 9)|(IE)]>
+   <table width="100%" cellspacing="0" cellpadding="0" border="0">
+      <tr>
+         <td valign="middle" width="50%" align="center">
+            <![endif]    -->
+{% endblock %} {% block mso9_middle %}
+  <!--    [if (gte mso 9)|(IE)]>
+   </td>
+   <![endif]    -->
+  <!--    [if (gte mso 9)|(IE)]>
+   <td valign="middle" width="50%" align="center">
+      <![endif]    -->
+{% endblock %} {% block mso9_close %}
+  <!--    [if (gte mso 9)|(IE)]>
+   </td>
+   </tr>
+   </table>
+   <![endif]    -->
+{% endblock %} {% block page %}
+  <table class="p-preheader">
+    <tr>
+      <td>
+        <a href="https://betcity.ru/"><img src="https://bboxpro.ru/betcity/15122023_2/img/image_0.png" width="580" height="50" alt="Betcity.ru" /></a>
+      </td>
+    </tr>
+  </table>
+  {% include '../../__layouts/mailing/layout_sections/header.twig' %}
+
+  <table class="didgest-announce">
+    <tr>
+      <td class="didgest-announce__pic">
+        <a href="https://promote.betcity.ru/newyear/"><img src="https://bboxpro.ru/betcity/15122023_2/img/image_1_1.png" width="580" height="247" alt="" /></a>
+      </td>
+    </tr>
+    <tr>
+      <td class="didgest-announce__text">17 декабря в рамках 17-го тура АПЛ встретятся «Ливерпуль» и «Ман Юнайтед». Мы собрали для вас выбор игроков на матч, прогноз с высоким коэффициентом и специальные ставки БЕТСИТИ!</td>
+    </tr>
+    <tr>
+      <td class="didgest-announce__button">
+        <a href="https://betcity.ru/ru/line/soccer/445/13583697"><img src="https://bboxpro.ru/betcity/15122023_2/img/btn_1.png" class="maxw-250" width="250" height="56" alt="" /></a>
+      </td>
+    </tr>
+  </table>
+  <table class="t-100">
+    <tr>
+      <td class="pl-24 pr-24">
+        {# враппер с отступами #}
+
+        <table class="bet-to-item">
+          {% set block_link = 'https://betcity.ru/ru/line/soccer/445/13583697' %}
+          <tr>
+            <td class="bet-to-item__pic">
+              <a href="{{ block_link }}"><img src="https://bboxpro.ru/betcity/15122023_2/img/image_2.png" width="535" height="575" alt="" /></a>
+            </td>
+          </tr>
+          <tr>
+            <td class="bet-to-item__text">
+              «Ливерпуль» выиграл все семь домашних матчей в АПЛ. В шести из этих игр мерсисайдцы победили с разницей в два мяча и более. С таким же преимуществом команда Юргена Клоппа выиграла в четырех из пяти последних очных матчей. Предлагаем взять в предстоящей встрече <span class="nobr">Ф1 (-1.5).</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="bet-to-item__button">
+              <a href="{{ block_link }}"><img src="https://bboxpro.ru/betcity/15122023_2/img/btn_2.png" class="maxw-280" width="280" height="52" alt="" /></a>
+            </td>
+          </tr>
+          <tr>
+            <td class="bet-to-item__spacer">&nbsp;</td>
+          </tr>
+        </table>
+
+        {# /враппер с отступами #}
+      </td>
+    </tr>
+  </table>
+
+  {# TEMPLATE
+
+
+<tr>
+      <td class="checkers__row" dir="ltr">
+        {% set block_link = '' %}
+        {% set block_title = ''%}
+        <div class="checkers__inliner">
+          <table class="checkers__info">
+            <tr>
+              <td class="checkers__header" dir="ltr">
+                <b>{{block_title}}</b>
+              </td>
+            </tr>
+            <tr>
+              <td class="checkers__text" dir="ltr"></td>
+            </tr>
+            <tr>
+              <td class="checkers__button" dir="ltr">
+                <a href="{{ block_link }}"><img src="https://bboxpro.ru/betcity/15122023_2/img/btn_3.png" width="246" height="53" alt="Сделать ставку на матч {{ block_title }}" /></a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="checkers__inliner">
+          <table class="checkers__pic">
+            <tr>
+              <td>
+                <a href="{{ block_link }}" dir="ltr"><img src="" alt="{{block_title}}" /></a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+    </tr>
+
+#}
+  <table class="checkers">
+    {# ====================================================================== #}
+    <tr>
+      <td class="checkers__row" dir="ltr">
+        {% set block_link = 'https://betcity.ru/ru/live/soccer/75175/13553716' %}
+        {% set block_title = 'Валенсия — Барселона' %}
+        <div class="checkers__inliner">
+          <table class="checkers__info">
+            <tr>
+              <td class="checkers__header" dir="ltr">
+                <b>{{ block_title }}</b>
+              </td>
+            </tr>
+            <tr>
+              <td class="checkers__text" dir="ltr">В прошлом туре сине-гранатовые проиграли «Жироне» и опустились на четвертое место. Закроют неудачу в матче с «Валенсией»?</td>
+            </tr>
+            <tr>
+              <td class="checkers__button" dir="ltr">
+                <a href="{{ block_link }}"><img src="https://bboxpro.ru/betcity/15122023_2/img/btn_3.png" width="246" height="53" alt="Сделать ставку на матч {{ block_title }}" /></a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="checkers__inliner">
+          <table class="checkers__pic">
+            <tr>
+              <td>
+                <a href="{{ block_link }}" dir="ltr"><img src="https://bboxpro.ru/betcity/15122023_2/img/image_3.png" width="246" height="235" alt="{{ block_title }}" /></a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="checkers__row" dir="rtl">
+        {% set block_link = 'https://betcity.ru/ru/live/soccer/445/13583691' %}
+        {% set block_title = 'Арсенал — Брайтон' %}
+        <div class="checkers__inliner">
+          <table class="checkers__info">
+            <tr>
+              <td class="checkers__header" dir="ltr">
+                <b>{{ block_title }}</b>
+              </td>
+            </tr>
+            <tr>
+              <td class="checkers__text" dir="ltr">«Арсенал» выиграл четыре домашних матча подряд. Сака и Жезус разберутся с обороной «Брайтона»?</td>
+            </tr>
+            <tr>
+              <td class="checkers__button" dir="ltr">
+                <a href="{{ block_link }}"><img src="https://bboxpro.ru/betcity/15122023_2/img/btn_3.png" width="246" height="53" alt="Сделать ставку на матч {{ block_title }}" /></a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="checkers__inliner">
+          <table class="checkers__pic">
+            <tr>
+              <td>
+                <a href="{{ block_link }}" dir="ltr"><img src="https://bboxpro.ru/betcity/15122023_2/img/image_4.png" width="246" height="235" alt="{{ block_title }}" /></a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="checkers__row" dir="ltr">
+        {% set block_link = 'https://betcity.ru/ru/live/soccer/75173/14075721' %}
+        {% set block_title = 'Лацио — Интер' %}
+        <div class="checkers__inliner">
+          <table class="checkers__info">
+            <tr>
+              <td class="checkers__header" dir="ltr">
+                <b>{{ block_title }}</b>
+              </td>
+            </tr>
+            <tr>
+              <td class="checkers__text" dir="ltr">
+                «Лацио» обыграл «Интер» в двух домашних матчах подряд. Команда Иммобиле снова огорчит лидера <span class="nobr">Серии А?</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="checkers__button" dir="ltr">
+                <a href="{{ block_link }}"><img src="https://bboxpro.ru/betcity/15122023_2/img/btn_3.png" width="246" height="53" alt="Сделать ставку на матч {{ block_title }}" /></a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="checkers__inliner">
+          <table class="checkers__pic">
+            <tr>
+              <td>
+                <a href="{{ block_link }}" dir="ltr"><img src="https://bboxpro.ru/betcity/15122023_2/img/image_5.png" width="246" height="235" alt="{{ block_title }}" /></a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="checkers__row" dir="rtl">
+        {% set block_link = 'https://betcity.ru/ru/live/soccer/75175/13553715' %}
+        {% set block_title = 'Реал — Вильярреал' %}
+        <div class="checkers__inliner">
+          <table class="checkers__info">
+            <tr>
+              <td class="checkers__header" dir="ltr">
+                <b>{{ block_title }}</b>
+              </td>
+            </tr>
+            <tr>
+              <td class="checkers__text" dir="ltr">Мадридцы потеряли первое место в таблице, но настроены вернуть его. Гостям будет сложно сдержать Беллингема и Родриго.</td>
+            </tr>
+            <tr>
+              <td class="checkers__button" dir="ltr">
+                <a href="{{ block_link }}"><img src="https://bboxpro.ru/betcity/15122023_2/img/btn_3.png" width="246" height="53" alt="Сделать ставку на матч {{ block_title }}" /></a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="checkers__inliner">
+          <table class="checkers__pic">
+            <tr>
+              <td>
+                <a href="{{ block_link }}" dir="ltr"><img src="https://bboxpro.ru/betcity/15122023_2/img/image_6.png" width="246" height="235" alt="{{ block_title }}" /></a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <table class="t-100">
+    <tr>
+      <td class="pl-24 pr-24">
+        {# враппер с отступами #}
+
+        <table class="bet-to-item">
+          {% set block_link = 'https://betcity.ru/ru/news/company/9108-brosok-na-posledney-sekunde-matcha-nba-prines-igroku-betsiti-36-mln-rubley' %}
+          <tr>
+            <td class="bet-to-item__pic">
+              <a href="{{ block_link }}"><img src="https://bboxpro.ru/betcity/15122023_2/img/image_7.png" width="532" height="360" alt="" /></a>
+            </td>
+          </tr>
+          <tr>
+            <td class="bet-to-item__text">Бросок на последней секунде матча НБА принес игроку БЕТСИТИ 3.6 млн рублей! Детали истории читайте на сайте.</td>
+          </tr>
+          <tr>
+            <td class="bet-to-item__button">
+              <a href="{{ block_link }}"><img src="https://bboxpro.ru/betcity/15122023_2/img/btn_4.png" class="maxw-240" width="240" height="54" alt="" /></a>
+            </td>
+          </tr>
+          <tr>
+            <td class="bet-to-item__spacer">&nbsp;</td>
+          </tr>
+        </table>
+
+        {# /враппер с отступами #}
+      </td>
+    </tr>
+  </table>
+{% endblock %}

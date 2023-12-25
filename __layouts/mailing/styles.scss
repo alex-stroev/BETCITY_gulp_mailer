@@ -58,7 +58,7 @@ table {
 ///  Отладка - если где-то упустили width у картинки
 ///////////////////////////////////////////////
 img:not([width]) {
-    border: 5px dashed red;
+    box-shadow: 0 0 10px 10px red;
 }
 
 // /////////////////////////////////////////////
@@ -161,4 +161,151 @@ img:not([width]) {
 }
 
 @import "layout_sections/header";
+@import "atomic";
 @import "layout_sections/footer";
+
+///////////////////////////////////////////////
+//
+///////////////////////////////////////////////
+.didgest-announce {
+    width: 100%;
+
+    &__pic {
+        img {
+            display: block;
+            @include respimg;
+        }
+    }
+
+    &__text {
+        @include ff_main;
+        color: #333333;
+        font-size: 19px;
+        line-height: 26px;
+        padding-left: 48px;
+        padding-right: 56px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    &__button {
+        text-align: center;
+        padding-bottom: 40px;
+    }
+}
+
+///////////////////////////////////////////////
+//
+///////////////////////////////////////////////
+.bet-to-item {
+    $grey: #f4f4f4;
+    width: 100%;
+
+    &__pic {
+        img {
+            display: block;
+            @include respimg;
+        }
+    }
+
+    &__text {
+        @include ff_main;
+        color: #333333;
+        font-size: 17px;
+        line-height: 25px;
+        padding-left: 32px;
+        padding-right: 24px;
+        background-color: $grey;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    &__button {
+        text-align: center;
+        background-color: $grey;
+        padding-bottom: 24px;
+        border-radius: 0 0 16px 16px;
+    }
+
+    &__spacer {
+        height: 24px;
+    }
+}
+
+////////////////////////////////////////////////////////////////////
+//
+////////////////////////////////////////////////////////////////////
+
+.checkers {
+    $row_spad: 4px;
+    $bpadd: 40px;
+    $spad: 20px;
+    $item_width: calc(($gross_width - $row_spad * 2) / 2);
+
+    @mixin sidepads {
+        padding-left: $spad;
+        padding-right: $spad;
+    }
+
+    &__row {
+        font-size: 0;
+        text-align: center;
+        padding-left: $row_spad;
+        padding-right: $row_spad;
+    }
+
+    &__inliner {
+        display: inline-block;
+        vertical-align: middle;
+        width: $item_width;
+    }
+
+    &__info {
+        width: $item_width;
+    }
+
+    &__header {
+        @include ff_main;
+        @include sidepads;
+        font-size: 18.5px;
+        line-height: 24px;
+        color: #333333;
+        padding-bottom: 12px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    &__text {
+        @include ff_main;
+        @include sidepads;
+        font-size: 17.5px;
+        line-height: 24px;
+        font-family: Helvetica, Arial, sans-serif;
+        color: #333333;
+        padding-bottom: 20px;
+    }
+
+    &__button {
+        @include sidepads;
+        padding-bottom: $bpadd;
+
+        img {
+            @include respimg;
+        }
+    }
+
+    &__pic {
+        width: $item_width;
+
+        & > tr {
+            & > td {
+                @include sidepads;
+                padding-bottom: $bpadd;
+            }
+        }
+
+        img {
+            @include respimg;
+        }
+    }
+}

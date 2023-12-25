@@ -1,0 +1,63 @@
+////////////////////////////////////////////////////////////////////
+//
+////////////////////////////////////////////////////////////////////
+.t-100 {
+    width: 100%;
+}
+
+.p-0 {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.respimg {
+    @include respimg;
+}
+
+.nobr,
+nowrap {
+    white-space: nowrap;
+}
+
+////////////////////////////////////////////////////////////////////
+//
+////////////////////////////////////////////////////////////////////
+
+@for $i from 0 through 20 {
+    $size: $i * 4;
+
+    .pl-#{$size} {
+        padding-left: #{$size}px;
+    }
+
+    .pr-#{$size} {
+        padding-right: #{$size}px;
+    }
+
+    .pt-#{$size} {
+        padding-top: #{$size}px;
+    }
+
+    .pb-#{$size} {
+        padding-bottom: #{$size}px;
+    }
+
+    .h-#{$size} {
+        height: #{$size}px;
+    }
+}
+
+////////////////////////////////////////////////////////////////////
+//
+////////////////////////////////////////////////////////////////////
+
+@for $i from 0 through 32 {
+    $size: $i * 5;
+
+    .maxw-#{$size} {
+        max-width: #{$size}px;
+        height: auto;
+    }
+}
