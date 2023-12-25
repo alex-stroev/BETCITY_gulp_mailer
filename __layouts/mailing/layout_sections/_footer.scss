@@ -12,36 +12,45 @@
 /// Иконки приложений
 //////////////////////////////////////////////////////////////////////////////
 ///
-.footer-apps-holder {
+.footer-apps {
     width: 100%;
+    $spad: 4px;
+    $coefficient: 5;
+    $item_width: calc(($gross_width - $spad * $coefficient * 2) / 2);
+    //
 
     &__padder {
-        padding-left: 8px;
-        padding-right: 8px;
+        padding-left: calc($spad * $coefficient);
+        padding-right: calc($spad * $coefficient);
+        padding-top: 12px;
+        padding-bottom: 24px;
         text-align: center;
         font-size: 0;
     }
-}
 
-.footer-app {
-    display: inline-table;
-    // text-align: left;
-    // width: 50%;
-    // background-color: red;
-    $spad: 4px;
-    width: 282px;
+    &__half {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        width: $item_width;
 
-    td {
-        font-size: 0;
-        padding-left: $spad;
-        padding-right: $spad;
-        padding-top: $spad;
-        padding-bottom: $spad;
-    }
+        table {
+            width: $item_width;
+            display: inline-table;
 
-    img {
-        @include respimg;
-        display: block;
+            td {
+                font-size: 0;
+                padding-left: $spad;
+                padding-right: $spad;
+                padding-top: $spad;
+                padding-bottom: $spad;
+            }
+
+            img {
+                @include respimg;
+                display: block;
+            }
+        }
     }
 }
 

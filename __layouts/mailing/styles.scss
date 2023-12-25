@@ -112,14 +112,15 @@ table {
 .allsports-grid {
     width: 100%;
     $spad: 12px;
-    $item_width: calc(($gross_width - $spad * 4) / 2);
+    $coefficient: 2;
+    $item_width: calc(($gross_width - $spad * $coefficient * 2) / 2);
 
     &__row {
         font-size: 0;
         text-align: center;
 
-        padding-left: calc($spad * 2);
-        padding-right: calc($spad * 2);
+        padding-left: calc($spad * $coefficient);
+        padding-right: calc($spad * $coefficient);
 
         & > div {
             display: inline-block;
