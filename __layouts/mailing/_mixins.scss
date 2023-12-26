@@ -26,3 +26,9 @@
     display: block;
     height: auto;
 }
+
+@mixin dark {
+    #dark & {
+        color: #ffffff;
+    }
+}

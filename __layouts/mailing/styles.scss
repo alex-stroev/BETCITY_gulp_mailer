@@ -32,6 +32,12 @@ body {
     text-align: center;
     background-color: #ffffff;
 
+    #dark & {
+        background-color: #171624;
+    }
+
+@include dark;
+
     &__td {
         vertical-align: top;
     }
@@ -152,9 +158,7 @@ img:not([width]) {
             img {
                 display: block;
                 height: auto;
-                width: calc(
-                    $item_width - $spad * 2
-                ); // ширина родителя минус боковые паддинги
+                width: calc($item_width - $spad * 2); // ширина родителя минус боковые паддинги
             }
         }
     }
@@ -186,6 +190,8 @@ img:not([width]) {
         padding-right: 56px;
         padding-top: 32px;
         padding-bottom: 32px;
+
+        @include dark;
     }
 
     &__button {
@@ -218,6 +224,8 @@ img:not([width]) {
         background-color: $grey;
         padding-top: 16px;
         padding-bottom: 16px;
+
+        @include dark;
     }
 
     &__button {
@@ -273,6 +281,8 @@ img:not([width]) {
         padding-bottom: 12px;
         font-weight: bold;
         margin: 0;
+
+        @include dark;
     }
 
     &__text {
@@ -283,6 +293,8 @@ img:not([width]) {
         font-family: Helvetica, Arial, sans-serif;
         color: #333333;
         padding-bottom: 20px;
+
+        @include dark;
     }
 
     &__button {
@@ -307,5 +319,23 @@ img:not([width]) {
         img {
             @include respimg;
         }
+    }
+}
+
+////////////////////////////////////////////////////////////////////
+//
+////////////////////////////////////////////////////////////////////
+.h2 {
+    width: 100%;
+
+    td {
+        @include ff_main;
+        font-size: 26px;
+        line-height: 28px;
+        font-weight: 700;
+        color: #333333;
+        text-align: center;
+
+        @include dark;
     }
 }
