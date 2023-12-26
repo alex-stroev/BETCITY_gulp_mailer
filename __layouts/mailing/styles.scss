@@ -156,6 +156,7 @@ img:not([width]) {
     &__item {
         width: $item_width;
         display: inline-table;
+        text-align: center;
 
         td {
             text-align: center;
