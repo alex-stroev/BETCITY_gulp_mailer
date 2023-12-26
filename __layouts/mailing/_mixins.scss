@@ -1,6 +1,6 @@
 @mixin noline {
     text-decoration: none;
-    
+
     &:hover,
     &:active {
         text-decoration: underline !important;
@@ -22,6 +22,7 @@
 
 @mixin respimg {
     max-width: 100%;
+    width: 100%; // Важно для мобильной версии GMAIL! Не убирать!
     font-size: 0;
     display: block;
     height: auto;

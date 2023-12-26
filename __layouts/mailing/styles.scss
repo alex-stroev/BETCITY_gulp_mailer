@@ -23,11 +23,12 @@ body {
     &__td {
         background: #b1b1b1;
         vertical-align: top;
-        text-align: left;
+        text-align: center;
     }
 }
 
 .kernel {
+    width: 100%;
     max-width: $gross_width;
     text-align: center;
     background-color: #ffffff;
@@ -36,7 +37,7 @@ body {
         background-color: #171624;
     }
 
-@include dark;
+    @include dark;
 
     &__td {
         vertical-align: top;
@@ -70,11 +71,11 @@ img:not([width]) {
 // /////////////////////////////////////////////
 .b-preheader {
     width: 100%;
-     td {
+    td {
         img {
             @include respimg;
         }
-     }
+    }
 }
 
 .cont-1 {
@@ -349,7 +350,7 @@ img:not([width]) {
 }
 
 ////////////////////////////////////////////////////////////////////
-//  Подключение атомарки должно стоять в самом конце, 
+//  Подключение атомарки должно стоять в самом конце,
 //  чтобы в случае чего переписать стили обычных классов
 ////////////////////////////////////////////////////////////////////
 @import "atomic";
