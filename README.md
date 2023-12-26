@@ -11,3 +11,7 @@
 - https://app.postdrop.io/
 - https://putsmail.com/tests/new 
 
+
+## Разное
+- https://emailmatrix.ru/blog/adaptive-layout/
+- https://tj-s.ru/tod/verstka-html-pisem.-chast-2.html
