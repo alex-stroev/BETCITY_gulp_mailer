@@ -68,6 +68,15 @@ img:not([width]) {
 }
 
 // /////////////////////////////////////////////
+.b-preheader {
+    width: 100%;
+     td {
+        img {
+            @include respimg;
+        }
+     }
+}
+
 .cont-1 {
     width: 100%;
     background-color: #062b75;
