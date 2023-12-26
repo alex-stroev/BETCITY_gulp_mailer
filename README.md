@@ -9,3 +9,5 @@
 
 ## Тестовая отправка
 - https://app.postdrop.io/
+- https://putsmail.com/tests/new 
+
