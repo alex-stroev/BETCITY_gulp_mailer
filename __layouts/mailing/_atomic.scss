@@ -57,7 +57,7 @@ nowrap {
 //
 ////////////////////////////////////////////////////////////////////
 
-@for $i from 0 through 32 {
+@for $i from 0 through 64 {
     $size: $i * 5;
 
     .maxw-#{$size} {
