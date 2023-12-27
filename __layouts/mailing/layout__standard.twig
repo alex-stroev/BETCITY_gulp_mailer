@@ -43,15 +43,18 @@ layout__standard.twig
 			<tr>
 				<td class="global__td inl">
 
+					<!--[if gte mso 10]><table align="center" width="580" border="0" cellspacing="0" cellpadding="0"><tr><td><![endif]-->
+
 					<table class="kernel inl">
 						<tr>
-							<td class="kernel__td inl"> {% block page %}{% endblock %}
-								</td>
+							<td class="kernel__td inl">{% block page %}{% endblock %}</td>
 							</tr>
 							<tr>
 								<td class="kernel__footer inl">{% include 'layout_sections/footer.twig' %}</td>
 							</tr>
 						</table>
+
+						<!--[if gte mso 10]></td></tr></table><![endif]-->
 
 					</td>
 				</tr>

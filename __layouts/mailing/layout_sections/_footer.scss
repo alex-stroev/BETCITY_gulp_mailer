@@ -47,10 +47,11 @@ $iconed_block_width: 260px;
         vertical-align: middle;
         text-align: center;
         width: $item_width;
+        // width: 50%;
 
         table {
-            width: $item_width;
-            display: inline-table;
+            // width: $item_width;
+            width: 100%;
 
             td {
                 font-size: 0;
@@ -78,8 +79,13 @@ $iconed_block_width: 260px;
     width: 100%;
 
     &__wrapper {
+        // Боковые паддинги считаем автоматически исходя из общей ширины и ширины блочка с иконкой
+        $spad: calc(($gross_width - $iconed_block_width * 2) / 2);
+
         font-size: 0;
         text-align: center;
+        padding-left: $spad;
+        padding-right: $spad;
     }
 }
 
@@ -90,8 +96,8 @@ $iconed_block_width: 260px;
 }
 
 .footer-contact {
-    width: $iconed_block_width;
-    display: inline-table;
+    // width: $iconed_block_width;
+    width: 100%;
 
     td {
         @include footer_iconed_block_vertical_paddings;
