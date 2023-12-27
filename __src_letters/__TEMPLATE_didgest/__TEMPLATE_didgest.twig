@@ -1,25 +1,23 @@
 {% extends '../../__layouts/mailing/layout__standard.twig' %}
 {% set title = '__TEMPLATE_didgest' %}
-{% block mso9_open %}
-  <!--      [if (gte mso 9)|(IE)]>
-   <table width="100%" cellspacing="0" cellpadding="0" border="0">
-      <tr>
-         <td valign="middle" width="50%" align="center">
-            <![endif]      -->
-{% endblock %} {% block mso9_middle %}
-  <!--      [if (gte mso 9)|(IE)]>
-   </td>
-   <![endif]      -->
-  <!--      [if (gte mso 9)|(IE)]>
-   <td valign="middle" width="50%" align="center">
-      <![endif]      -->
-{% endblock %} {% block mso9_close %}
-  <!--      [if (gte mso 9)|(IE)]>
-   </td>
-   </tr>
-   </table>
-   <![endif]      -->
-{% endblock %} {% block page %}
+{# =================================================================== #}
+{# =================================================================== #}
+{# =================================================================== #}
+{# ВАЖНО! Убедиться, что в MSO блоках нет пробелов! #}
+{# =================================================================== #}
+{# =================================================================== #}
+{# =================================================================== #}
+{% block mso10_start %}
+  <!-- [if gte mso 10]><table align="center" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="50%"><![endif] -->
+{% endblock %}
+{% block mso10_middle %}
+  <!-- [if gte mso 10]></td><td width="50%"><![endif] -->
+{% endblock %}
+{% block mso10_end %}
+  <!-- [if gte mso 10]></td></tr></table><![endif] -->
+{% endblock %}
+
+{% block page %}
   <table class="b-preheader">
     <tr>
       <td>
@@ -83,6 +81,8 @@
       <td class="checkers__row inl" dir="ltr">
         {% set block_link = '' %}
         {% set block_title = ''%}
+
+{{ block("mso10_start") }}
         <div class="checkers__inliner inl">
           <table class="checkers__info inl">
             <tr>
@@ -100,6 +100,8 @@
             </tr>
           </table>
         </div>
+
+{{ block("mso10_middle") }}
         <div class="checkers__inliner inl">
           <table class="checkers__pic inl">
             <tr>
@@ -109,6 +111,8 @@
             </tr>
           </table>
         </div>
+{{ block("mso10_end") }}
+
       </td>
     </tr>
 
@@ -119,6 +123,8 @@
       <td class="checkers__row inl" dir="ltr">
         {% set block_link = 'https://betcity.ru/ru/live/soccer/75175/13553716' %}
         {% set block_title = 'Валенсия — Барселона' %}
+
+        {{ block("mso10_start") }}
         <div class="checkers__inliner inl">
           <table class="checkers__info inl">
             <tr>
@@ -136,6 +142,8 @@
             </tr>
           </table>
         </div>
+
+        {{ block("mso10_middle") }}
         <div class="checkers__inliner inl">
           <table class="checkers__pic inl">
             <tr>
@@ -145,12 +153,15 @@
             </tr>
           </table>
         </div>
+        {{ block("mso10_end") }}
       </td>
     </tr>
     <tr>
       <td class="checkers__row inl" dir="rtl">
         {% set block_link = 'https://betcity.ru/ru/live/soccer/445/13583691' %}
         {% set block_title = 'Арсенал — Брайтон' %}
+
+        {{ block('mso10_start') }}
         <div class="checkers__inliner inl">
           <table class="checkers__info inl">
             <tr>
@@ -168,6 +179,8 @@
             </tr>
           </table>
         </div>
+
+        {{ block('mso10_middle') }}
         <div class="checkers__inliner inl">
           <table class="checkers__pic inl">
             <tr>
@@ -177,6 +190,7 @@
             </tr>
           </table>
         </div>
+        {{ block('mso10_end') }}
       </td>
     </tr>
 
@@ -184,6 +198,8 @@
       <td class="checkers__row inl" dir="ltr">
         {% set block_link = 'https://betcity.ru/ru/live/soccer/75173/14075721' %}
         {% set block_title = 'Лацио — Интер' %}
+
+        {{ block('mso10_start') }}
         <div class="checkers__inliner inl">
           <table class="checkers__info inl">
             <tr>
@@ -203,6 +219,8 @@
             </tr>
           </table>
         </div>
+        {{ block('mso10_middle') }}
+
         <div class="checkers__inliner inl">
           <table class="checkers__pic inl">
             <tr>
@@ -212,6 +230,7 @@
             </tr>
           </table>
         </div>
+        {{ block('mso10_end') }}
       </td>
     </tr>
 
@@ -219,6 +238,8 @@
       <td class="checkers__row inl" dir="rtl">
         {% set block_link = 'https://betcity.ru/ru/live/soccer/75175/13553715' %}
         {% set block_title = 'Реал — Вильярреал' %}
+
+        {{ block('mso10_start') }}
         <div class="checkers__inliner inl">
           <table class="checkers__info inl">
             <tr>
@@ -236,6 +257,8 @@
             </tr>
           </table>
         </div>
+
+        {{ block('mso10_middle') }}
         <div class="checkers__inliner inl">
           <table class="checkers__pic inl">
             <tr>
@@ -245,6 +268,8 @@
             </tr>
           </table>
         </div>
+
+        {{ block('mso10_end') }}
       </td>
     </tr>
   </table>
