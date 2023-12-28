@@ -78,57 +78,6 @@ img:not([width]) {
     }
 }
 
-.cont-1 {
-    width: 100%;
-    background-color: #062b75;
-
-    &__hero {
-        img {
-            @include respimg;
-        }
-    }
-
-    &__text {
-        @include ff_main;
-        font-size: 19px;
-        line-height: 26px;
-        color: #fff;
-        padding-top: 32px;
-        padding-bottom: 32px;
-        padding-left: 48px;
-        padding-right: 40px;
-    }
-
-    &__button {
-        text-align: center;
-        vertical-align: top;
-        padding-bottom: 36px;
-
-        img {
-            display: block;
-            max-width: 250px;
-            height: auto;
-        }
-    }
-
-    &__grid {
-        padding-top: 40px;
-        background-color: #051854;
-    }
-
-    &__grid-button {
-        background-color: #051854;
-        text-align: center;
-        padding-top: 28px;
-        padding-bottom: 32px;
-
-        img {
-            display: block;
-            max-width: 250px;
-        }
-    }
-}
-
 ///////////////////////////////////////////////
 // Сетка для "Все виды спорта"
 ///////////////////////////////////////////////
@@ -169,7 +118,9 @@ img:not([width]) {
             img {
                 display: block;
                 height: auto;
-                width: calc($item_width - $spad * 2); // ширина родителя минус боковые паддинги
+                width: calc(
+                    $item_width - $spad * 2
+                ); // ширина родителя минус боковые паддинги
             }
         }
     }

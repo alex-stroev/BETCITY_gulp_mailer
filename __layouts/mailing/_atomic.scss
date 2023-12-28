@@ -81,3 +81,27 @@ nowrap {
 .i-right {
     text-align: right;
 }
+
+////////////////////////////////////////////////////////////////////
+//
+////////////////////////////////////////////////////////////////////
+
+.i-blue {
+    background-color: #062b75;
+    color: #fff;
+
+    td {
+        background-color: #062b75;
+        color: #fff;
+    }
+}
+
+.i-darkblue {
+    background-color: #051854;
+    color: #fff;
+
+    td {
+        background-color: #051854;
+        color: #fff;
+    }
+}
