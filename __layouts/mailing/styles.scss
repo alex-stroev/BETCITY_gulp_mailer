@@ -220,6 +220,7 @@ img:not([width]) {
     $row_spad: 4px;
     $bpadd: 40px;
     $spad: 20px;
+    width: 100%;
     $item_width: calc(($gross_width - $row_spad * 2) / 2);
 
     @mixin sidepads {
