@@ -18,206 +18,206 @@
   <!-- [if gte mso 10]></td></tr></table><![endif] -->
 {% endblock %}
 {% block page %}
-	<table class="b-preheader">
-		<tr>
-			<td>
-				<a href="https://betcity.ru/"><img src="https://bboxpro.ru/betcity/08122023_1/img/image_0.png" width="580" height="50" alt=""></a>
-			</td>
-		</tr>
-	</table>
-	{% include '../../__layouts/mailing/layout_sections/header.twig' %}
+  <table class="b-preheader">
+    <tr>
+      <td>
+        <a href="https://betcity.ru/"><img src="https://bboxpro.ru/betcity/08122023_1/img/image_0.png" width="580" height="50" alt="" /></a>
+      </td>
+    </tr>
+  </table>
+  {% include '../../__layouts/mailing/layout_sections/header.twig' %}
 
-	<table class="didgest-announce">
-		{% set block_link ="https://betcity.ru/ru/line/cybersport" %}
-		<tr>
-			<td class="didgest-announce__pic">
-				<a href="{{ block_link }}"><img src="https://bboxpro.ru/betcity/08122023_1/img/image_1_1.png" width="580" height="284" alt=""></a>
-			</td>
-		</tr>
-		<tr>
-			<td class="didgest-announce__text">Фанатам Dota 2 приготовиться – 11 декабря в Куала-Лумпуре стартует турнир от ESL <span class="nobr">за $1 000 000.</span> Заряжай на дебютные серии уже сейчас!
-			</td>
-		</tr>
-		<tr>
-			<td class="didgest-announce__button">
-				<a href="{{ block_link }}"><img src="https://bboxpro.ru/betcity/15122023_2/img/btn_1.png" class="maxw-250" width="250" height="56" alt=""/></a>
-			</td>
-		</tr>
-	</table>
+  <table class="didgest-announce">
+    {% set block_link = 'https://betcity.ru/ru/line/cybersport' %}
+    <tr>
+      <td class="didgest-announce__pic">
+        <a href="{{ block_link }}"><img src="https://bboxpro.ru/betcity/08122023_1/img/image_1_1.png" width="580" height="284" alt="" /></a>
+      </td>
+    </tr>
+    <tr>
+      <td class="didgest-announce__text">
+        Фанатам Dota 2 приготовиться – 11 декабря в Куала-Лумпуре стартует турнир от ESL <span class="nobr">за $1 000 000.</span> Заряжай на дебютные серии уже сейчас!
+      </td>
+    </tr>
+    <tr>
+      <td class="didgest-announce__button">
+        <a href="{{ block_link }}"><img src="https://bboxpro.ru/betcity/15122023_2/img/btn_1.png" class="maxw-250" width="250" height="56" alt="" /></a>
+      </td>
+    </tr>
+  </table>
 
-	<table class="h2">
-		<tr>
-			<td class="pb-36 pl-32 pr-32">Топ-матчи первого дня</td>
-		</tr>
-	</table>
+  <table class="h2">
+    <tr>
+      <td class="pb-36 pl-32 pr-32">Топ-матчи первого дня</td>
+    </tr>
+  </table>
 
-
-	{# TEMPLATE
-	
-	
-	<tr>
-	      <td class="checkers__row inl" dir="ltr">
-	        {% set block_link = '' %}
-	        {% set block_title = '' %}
-
-	        {{ block("mso10_start") }}
-	        <div class="checkers__inliner inl">
-	          <table class="checkers__info inl">
-	            <tr>
-	              <td class="checkers__header inl" dir="ltr">
-	                <b>{{block_title}}</b>
-	              </td>
-	            </tr>
-	            <tr>
-	              <td class="checkers__text inl" dir="ltr"></td>
-	            </tr>
-	            <tr>
-	              <td class="checkers__button inl" dir="ltr">
-	                <a href="{{ block_link }}"><img src="https://bboxpro.ru/betcity/15122023_2/img/btn_3.png" width="246" height="53" alt="Сделать ставку на матч {{ block_title }}" /></a>
-	              </td>
-	            </tr>
-	          </table>
-	        </div>
-
-	        {{ block("mso10_middle") }}
-	        <div class="checkers__inliner inl">
-	          <table class="checkers__pic inl">
-	            <tr>
-	              <td>
-	                <a href="{{ block_link }}" dir="ltr"><img src="" alt="{{block_title}}" /></a>
-	              </td>
-	            </tr>
-	          </table>
-	        </div>
-
-	        {{ block("mso10_end") }}
-	      </td>
-	    </tr>
-	
-	#}
-	<table
-		class="checkers">
-		{# ====================================================================== #}
-
-		<tr>
-			<td class="checkers__row inl" dir="rtl">
-				{% set block_link = 'https://betcity.ru/ru/live/cybersport/301729/14721112' %}
-				{% set block_title = 'Azure Ray — Team Secret' %}
-
-				{{ block("mso10_start") }}
-				<div class="checkers__inliner inl">
-					<table class="checkers__info inl">
-						<tr>
-							<td class="checkers__header inl" dir="ltr">
-								<b>{{block_title}}</b>
-							</td>
-						</tr>
-						<tr>
-							<td class="checkers__text inl" dir="ltr">Secret выиграли восемь из десяти матчей в квалах. Снова затащат?</td>
-						</tr>
-						<tr>
-							<td class="checkers__button inl" dir="ltr">
-								<a href="{{ block_link }}"><img src="https://bboxpro.ru/betcity/15122023_2/img/btn_3.png" width="246" height="53" alt="Сделать ставку на матч {{ block_title }}"/></a>
-							</td>
-						</tr>
-					</table>
-				</div>
-
-				{{ block("mso10_middle") }}
-				<div class="checkers__inliner inl">
-					<table class="checkers__pic inl">
-						<tr>
-							<td>
-								<a href="{{ block_link }}" dir="ltr"><img src="https://bboxpro.ru/betcity/08122023_1/img/image_4.png" width="246" height="235" alt="{{block_title}}"/></a>
-							</td>
-						</tr>
-					</table>
-				</div>
-
-				 {{ block("mso10_end") }}
-			</td>
-		</tr>
-
-		<tr>
-			<td class="checkers__row inl" dir="ltr">
-				{% set block_link = 'https://betcity.ru/ru/live/cybersport/301729/14721124' %}
-				{% set block_title = '9 Pandas — Team Liquid' %}
-
-				{{ block("mso10_start") }}
-				<div class="checkers__inliner inl">
-					<table class="checkers__info inl">
-						<tr>
-							<td class="checkers__header inl" dir="ltr">
-								<b>{{block_title}}</b>
-							</td>
-						</tr>
-						<tr>
-							<td class="checkers__text inl" dir="ltr">Прошлая встреча команд закончилась 2:0 в пользу панд. Снова П1 или ноль шансов с новой тройкой?</td>
-						</tr>
-						<tr>
-							<td class="checkers__button inl" dir="ltr">
-								<a href="{{ block_link }}"><img src="https://bboxpro.ru/betcity/15122023_2/img/btn_3.png" width="246" height="53" alt="Сделать ставку на матч {{ block_title }}"/></a>
-							</td>
-						</tr>
-					</table>
-				</div>
-
-				{{ block("mso10_middle") }}
-				<div class="checkers__inliner inl">
-					<table class="checkers__pic inl">
-						<tr>
-							<td>
-								<a href="{{ block_link }}" dir="ltr"><img src="https://bboxpro.ru/betcity/08122023_1/img/image_5.png" width="246" height="235" alt="{{block_title}}"/></a>
-							</td>
-						</tr>
-					</table>
-				</div>
-
-				 {{ block("mso10_end") }}
-			</td>
-		</tr>
-
-		<tr>
-			<td class="checkers__row inl" dir="rtl">
-				{% set block_link = 'https://betcity.ru/ru/live/cybersport/301729/14721132' %}
-				{% set block_title = 'Invictus Gaming — LGD Gaming' %}
-
-				{{ block("mso10_start") }}
-				<div class="checkers__inliner inl">
-					<table class="checkers__info inl">
-						<tr>
-							<td class="checkers__header inl" dir="ltr">
-								<b>{{block_title}}</b>
-							</td>
-						</tr>
-						<tr>
-							<td class="checkers__text inl" dir="ltr">Китайское дерби в обновленных составах. Кто возьмет верх в первой встрече после глобального решафла?</td>
-						</tr>
-						<tr>
-							<td class="checkers__button inl" dir="ltr">
-								<a href="{{ block_link }}"><img src="https://bboxpro.ru/betcity/15122023_2/img/btn_3.png" width="246" height="53" alt="Сделать ставку на матч {{ block_title }}"/></a>
-							</td>
-						</tr>
-					</table>
-				</div>
-
-				{{ block("mso10_middle") }}
-				<div class="checkers__inliner inl">
-					<table class="checkers__pic inl">
-						<tr>
-							<td>
-								<a href="{{ block_link }}" dir="ltr"><img src="https://bboxpro.ru/betcity/08122023_1/img/image_6.png" width="246" height="235" alt="{{block_title}}"/></a>
-							</td>
-						</tr>
-					</table>
-				</div>
-
-				 {{ block("mso10_end") }}
-			</td>
-		</tr>
+  {# TEMPLATE
 
 
-	</table>
+<tr>
+      <td class="checkers__row inl" dir="ltr">
+        {% set block_link = '' %}
+        {% set block_title = ''%}
 
+{{ block("mso10_start") }}
 
+         <div class="checkers__inliner inl">
+          <table class="checkers__pic inl">
+            <tr>
+              <td>
+                <a href="{{ block_link }}" dir="ltr"><img src="" alt="{{block_title}}" /></a>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+{{ block("mso10_middle") }}
+
+<div class="checkers__inliner inl">
+          <table class="checkers__info inl">
+            <tr>
+              <td class="checkers__header inl" dir="ltr">
+                <b>{{block_title}}</b>
+              </td>
+            </tr>
+            <tr>
+              <td class="checkers__text inl" dir="ltr"></td>
+            </tr>
+            <tr>
+              <td class="checkers__button inl" dir="ltr">
+                <a href="{{ block_link }}"><img src="https://bboxpro.ru/betcity/15122023_2/img/btn_3.png" width="246" height="53" alt="Сделать ставку на матч {{ block_title }}" /></a>
+              </td>
+            </tr>
+          </table>
+        </div>
+       
+{{ block("mso10_end") }}
+
+      </td>
+    </tr>
+
+#}
+  <table class="checkers">
+    {# ====================================================================== #}
+
+    <tr>
+      <td class="checkers__row inl" dir="ltr">
+        {% set block_link = 'https://betcity.ru/ru/live/cybersport/301729/14721112' %}
+        {% set block_title = 'Azure Ray — Team Secret' %}
+
+        {{ block('mso10_start') }}
+
+        <div class="checkers__inliner inl">
+          <table class="checkers__pic inl">
+            <tr>
+              <td>
+                <a href="{{ block_link }}" dir="ltr"><img src="https://bboxpro.ru/betcity/08122023_1/img/image_4.png" width="246" height="235" alt="{{ block_title }}" /></a>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        {{ block('mso10_middle') }}
+
+        <div class="checkers__inliner inl">
+          <table class="checkers__info inl">
+            <tr>
+              <td class="checkers__header inl" dir="ltr">
+                <b>{{ block_title }}</b>
+              </td>
+            </tr>
+            <tr>
+              <td class="checkers__text inl" dir="ltr">Secret выиграли восемь из десяти матчей в квалах. Снова затащат?</td>
+            </tr>
+            <tr>
+              <td class="checkers__button inl" dir="ltr">
+                <a href="{{ block_link }}"><img src="https://bboxpro.ru/betcity/15122023_2/img/btn_3.png" width="246" height="53" alt="Сделать ставку на матч {{ block_title }}" /></a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        {{ block('mso10_end') }}
+      </td>
+    </tr>
+
+    <tr>
+      <td class="checkers__row inl" dir="rtl">
+        {% set block_link = 'https://betcity.ru/ru/live/cybersport/301729/14721124' %}
+        {% set block_title = '9 Pandas — Team Liquid' %}
+
+        {{ block('mso10_start') }}
+
+        <div class="checkers__inliner inl">
+          <table class="checkers__pic inl">
+            <tr>
+              <td>
+                <a href="{{ block_link }}" dir="ltr"><img src="https://bboxpro.ru/betcity/08122023_1/img/image_5.png" width="246" height="235" alt="{{ block_title }}" /></a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        {{ block('mso10_middle') }}
+
+        <div class="checkers__inliner inl">
+          <table class="checkers__info inl">
+            <tr>
+              <td class="checkers__header inl" dir="ltr">
+                <b>{{ block_title }}</b>
+              </td>
+            </tr>
+            <tr>
+              <td class="checkers__text inl" dir="ltr">Прошлая встреча команд закончилась 2:0 в пользу панд. Снова П1 или ноль шансов с новой тройкой?</td>
+            </tr>
+            <tr>
+              <td class="checkers__button inl" dir="ltr">
+                <a href="{{ block_link }}"><img src="https://bboxpro.ru/betcity/15122023_2/img/btn_3.png" width="246" height="53" alt="Сделать ставку на матч {{ block_title }}" /></a>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        {{ block('mso10_end') }}
+      </td>
+    </tr>
+
+    <tr>
+      <td class="checkers__row inl" dir="ltr">
+        {% set block_link = 'https://betcity.ru/ru/live/cybersport/301729/14721132' %}
+        {% set block_title = 'Invictus Gaming — LGD Gaming' %}
+
+        {{ block('mso10_start') }}
+        <div class="checkers__inliner inl">
+          <table class="checkers__pic inl">
+            <tr>
+              <td>
+                <a href="{{ block_link }}" dir="ltr"><img src="https://bboxpro.ru/betcity/08122023_1/img/image_6.png" width="246" height="235" alt="{{ block_title }}" /></a>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        {{ block('mso10_middle') }}
+        <div class="checkers__inliner inl">
+          <table class="checkers__info inl">
+            <tr>
+              <td class="checkers__header inl" dir="ltr">
+                <b>{{ block_title }}</b>
+              </td>
+            </tr>
+            <tr>
+              <td class="checkers__text inl" dir="ltr">Китайское дерби в обновленных составах. Кто возьмет верх в первой встрече после глобального решафла?</td>
+            </tr>
+            <tr>
+              <td class="checkers__button inl" dir="ltr">
+                <a href="{{ block_link }}"><img src="https://bboxpro.ru/betcity/15122023_2/img/btn_3.png" width="246" height="53" alt="Сделать ставку на матч {{ block_title }}" /></a>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        {{ block('mso10_end') }}
+      </td>
+    </tr>
+  </table>
 {% endblock %}
