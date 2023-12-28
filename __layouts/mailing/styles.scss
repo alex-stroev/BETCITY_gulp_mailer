@@ -223,14 +223,7 @@ img:not([width]) {
     width: 100%;
     $item_width: calc(($gross_width - $row_spad * 2) / 2);
 
-    @mixin sidepads {
-        padding-left: $spad;
-        padding-right: $spad;
-    }
-
-    &__row {
-        font-size: 0;
-        text-align: center;
+    &__wrapper {
         padding-left: $row_spad;
         padding-right: $row_spad;
 
@@ -239,14 +232,35 @@ img:not([width]) {
         }
     }
 
+    &__content {
+        width: 100%;
+    }
+
+    @mixin sidepads {
+        padding-left: $spad;
+        padding-right: $spad;
+    }
+
+    &__row {
+        font-size: 0;
+        text-align: center;
+    }
+
     &__inliner {
         display: inline-block;
         vertical-align: middle;
         width: $item_width;
+
+        &.i-111 {
+            background-color: cadetblue;
+            color: #ffffff;
+            font-size: 16px;
+        }
     }
 
     &__info {
-        width: $item_width;
+        // width: $item_width;
+        width: 100%;
     }
 
     &__header {
@@ -285,7 +299,8 @@ img:not([width]) {
     }
 
     &__pic {
-        width: $item_width;
+        // width: $item_width;
+        width: 100%;
 
         & > tr {
             & > td {
