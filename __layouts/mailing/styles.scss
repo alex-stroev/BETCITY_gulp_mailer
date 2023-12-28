@@ -81,11 +81,21 @@ img:not([width]) {
 ///////////////////////////////////////////////
 // Сетка для "Все виды спорта"
 ///////////////////////////////////////////////
+
 .allsports-grid {
     width: 100%;
     $spad: 12px;
     $coefficient: 2;
     $item_width: calc(($gross_width - $spad * $coefficient * 2) / 2);
+
+    &__wrapper {
+        background-color: #051854;
+        padding-top: 32px;
+    }
+
+    &__content {
+        width: 100%;
+    }
 
     &__row {
         font-size: 0;
@@ -114,6 +124,7 @@ img:not([width]) {
             padding-bottom: $spad;
             padding-left: $spad;
             padding-right: $spad;
+            background-color: #051854;
 
             img {
                 display: block;

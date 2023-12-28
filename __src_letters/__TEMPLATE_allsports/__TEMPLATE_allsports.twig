@@ -1,6 +1,5 @@
-{% extends "../../__layouts/mailing/layout__standard.twig" %} 
-{% set title =
-"__TEMPLATE_allsports" %} 
+{% extends '../../__layouts/mailing/layout__standard.twig' %}
+{% set title = '__TEMPLATE_allsports' %}
 
 {# =================================================================== #}
 {# =================================================================== #}
@@ -19,61 +18,121 @@
   <!-- [if gte mso 10]></td></tr></table><![endif] -->
 {% endblock %}
 {% block page %}
-
-
-<table class="b-preheader">
-   <tr>
-      <td><a href="https://betcity.ru/"><img src="https://bboxpro.ru/betcity/18122023/img/image_0.png" width="580" height="50" alt="Betcity.ru"></a></td>
-   </tr>
-</table>
-{% include '../../__layouts/mailing/layout_sections/header.twig' %}
-<table class="didgest-announce i-blue">
-   <tr>
+  <table class="b-preheader">
+    <tr>
+      <td>
+        <a href="https://betcity.ru/"><img src="https://bboxpro.ru/betcity/18122023/img/image_0.png" width="580" height="50" alt="Betcity.ru" /></a>
+      </td>
+    </tr>
+  </table>
+  {% include '../../__layouts/mailing/layout_sections/header.twig' %}
+  <table class="didgest-announce i-blue">
+    <tr>
       <td class="didgest-announce__pic inl">
-         <a
-            href="https://betcity.ru/ru/news/company/9108-brosok-na-posledney-sekunde-matcha-nba-prines-igroku-betsiti-36-mln-rubley"
-            ><a href=""
-            ><img
-            src="https://bboxpro.ru/betcity/18122023/img/image_1.png"
-            alt=""
-            width="580"
-            height="382" /></a
-            ></a>
+        <a href="https://betcity.ru/ru/news/company/9108-brosok-na-posledney-sekunde-matcha-nba-prines-igroku-betsiti-36-mln-rubley"><img src="https://bboxpro.ru/betcity/18122023/img/image_1.png" alt="" width="580" height="382" /></a>
       </td>
-   </tr>
-   <tr>
+    </tr>
+    <tr>
       <td class="didgest-announce__text inl">
-         Бросок на последней секунде матча НБА принес игроку БЕТСИТИ <span class="nobr">3.6 млн</span>  рублей! Рассказываем, как собрать невероятную историю успеха нашего
-         беттора. Подробнее – читайте на сайте!
+        Бросок на последней секунде матча НБА принес игроку БЕТСИТИ <span class="nobr">3.6 млн</span> рублей! Рассказываем, как собрать невероятную историю успеха нашего беттора. Подробнее – читайте на сайте!
       </td>
-   </tr>
-   <tr>
+    </tr>
+    <tr>
       <td class="didgest-announce__button inl">
-         <a
-            href="https://betcity.ru/ru/news/company/9108-brosok-na-posledney-sekunde-matcha-nba-prines-igroku-betsiti-36-mln-rubley"
-            ><img
-            src="https://bboxpro.ru/betcity/18122023/img/btn_2.png"
-            class="maxw-250"
-            width="250"
-            height="57"
-            alt="Подробнее"
-            /></a>
+        <a href="https://betcity.ru/ru/news/company/9108-brosok-na-posledney-sekunde-matcha-nba-prines-igroku-betsiti-36-mln-rubley"><img src="https://bboxpro.ru/betcity/18122023/img/btn_2.png" class="maxw-250" width="250" height="57" alt="Подробнее" /></a>
       </td>
-   </tr>
-</table>
+    </tr>
+  </table>
 
-<table class="t-100 i-darkblue inl">
-   <td>
-      <td class="i-center pt-28 pb-32 inl">
-         <a href="https://betcity.ru/ru/live"
-            ><img
-            src="https://bboxpro.ru/betcity/18122023/img/btn_1.png"
-            width="250"
-            height="55"
-            class="maxw-250"
-            alt=""
-            /></a>
+  <table class="allsports-grid">
+    <tr>
+      <td class="allsports-grid__wrapper">
+        <table class="allsports-grid__content">
+          <tr>
+            <td class="allsports-grid__row">
+              {{ block('mso10_start') }}
+              <div>
+                <table class="allsports-grid__item inl">
+                  <tr>
+                    <td>
+                      <a href="https://betcity.ru/ru/line/soccer/75175"><img src="https://bboxpro.ru/betcity/18122023/img/image_2.png" width="242" height="120" alt="" /></a>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              {{ block('mso10_middle') }}
+              <div>
+                <table class="allsports-grid__item inl">
+                  <tr>
+                    <td>
+                      <a href="https://betcity.ru/ru/line/ice-hockey/71753"><img src="https://bboxpro.ru/betcity/18122023/img/image_3.png" width="242" height="120" alt="" /></a>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              {{ block('mso10_end') }}
+            </td>
+          </tr>
+          <tr>
+            <td class="allsports-grid__row">
+              {{ block('mso10_start') }}
+              <div>
+                <table class="allsports-grid__item inl">
+                  <tr>
+                    <td>
+                      <a href="https://betcity.ru/ru/line/basketball/6165"><img src="https://bboxpro.ru/betcity/18122023/img/image_4.png" width="242" height="120" alt="" /></a>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              {{ block('mso10_middle') }}
+              <div>
+                <table class="allsports-grid__item inl">
+                  <tr>
+                    <td>
+                      <a href="https://betcity.ru/ru/line/tennis"><img src="https://bboxpro.ru/betcity/18122023/img/image_6.png" width="242" height="120" alt="" /></a>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              {{ block('mso10_end') }}
+            </td>
+          </tr>
+          <tr>
+            <td class="allsports-grid__row">
+              {{ block('mso10_start') }}
+              <div>
+                <table class="allsports-grid__item inl">
+                  <tr>
+                    <td>
+                      <a href="https://betcity.ru/ru/line/cybersport"><img src="https://bboxpro.ru/betcity/18122023/img/image_7.png" width="242" height="120" alt="" /></a>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              {{ block('mso10_middle') }}
+              <div>
+                <table class="allsports-grid__item inl">
+                  <tr>
+                    <td>
+                      <a href="https://betcity.ru/ru/line/ufc/27011"><img src="https://bboxpro.ru/betcity/18122023/img/image_8.png" width="242" height="120" alt="" /></a>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              {{ block('mso10_end') }}
+            </td>
+          </tr>
+        </table>
       </td>
-   </td>
-</table>
+    </tr>
+  </table>
+
+  <table class="t-100 i-darkblue inl">
+    <tr>
+      <td class="i-center pt-28 pb-32 inl">
+        <a href="https://betcity.ru/ru/live"><img src="https://bboxpro.ru/betcity/18122023/img/btn_1.png" width="250" height="55" class="maxw-250" alt="" /></a>
+      </td>
+    </tr>
+  </table>
 {% endblock %}
